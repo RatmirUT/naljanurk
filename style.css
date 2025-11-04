@@ -143,18 +143,13 @@ footer {
 
 /* telefoni jaoks kui otsustame et on vajalik */
 @media (max-width: 700px) {
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-        (max-width: 560px) {
-            .tip-photo { aspect-ratio: 16 / 9; 
-    object-position: 50% 25%;
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
   }
-    }
+
+  nav {
+    align-self: flex-end;
+    padding-top: 10px;
+  }
 }
-
-    nav {
-        align-self: flex-end;
-        padding-top: 10px;
-    }
-
