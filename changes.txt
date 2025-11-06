@@ -1,3 +1,4 @@
+html 
 <!DOCTYPE html>
 <html lang="et">
 <head>
@@ -33,15 +34,8 @@
             <div class="slide-content">
                 <div>
                     <h3>Kaerahelbepuder banaani või moosiga</h3>
-                    <p>Koostisosad:
-                        Kaerahelbed – 50 g,
-                        Vesi või piim – 200 ml,
-                        Näputäis soola,
-                        Banaan – 1 tk.</p>
-                    <p>Hind: ~ 0,6 - 0,9 €</p>
-                    <p>Valmistamine:
-                        Keeda kaerahelbed vees või piimas 5–7 minutit,lisa sool.Lõika banaan viiludeks ja sega sisse.</p>
-                    <p>Aeg: ~10 minutit</p>
+                    <p>Koostisosad: Kaerahelbed, piim või vesi, banaan, moos.</p>
+                    <p>Valmistamine: Keeda 5-7 minutit, lisa banaan ja moos.</p>
                 </div>
                 <img src="images/ban.png" class="slide-img" alt="Kaerahelbepuder">
             </div>
@@ -74,18 +68,8 @@
             <div class="slide-content">
                 <div>
                     <h3>Kohupiimapannkoogid</h3>
-                    <p>Koostisosad:
-                        200 g kohupiima (5% või 0%), 
-                        1 munakollane, 
-                        2 spl nisujahu, 
-                        1 tl mett või magusainet, 
-                        natuke vanilli või kaneeli, 
-                        praadimiseks kookosõli või tilk oliiviõli, 
-                        maitsestamata joogurt</p>
-                    <p>Hind: ~1.5 €</p>
-                    <p>Valmistamine:
-                        Sega kõik koostisosad ühtlaseks massiks.Vormi väikesed pätsikesed ja veereta neid õhukeses jahukihis. Prae keskmisel kuumusel mõlemalt poolt kuldpruuniks väheses õlis. Serveeri maitsestamata jogurtiga.</p>
-                    <p>Aeg: ~15 minutit.</p>
+                    <p>Koostisosad: kohupiim, muna, jahu, jogurt.</p>
+                    <p>Vormita ja prae mõlemalt poolt kuldseks.</p>
                 </div>
                 <img src="images/paank.png" class="slide-img" alt="Kohupiimapannkoogid">
             </div>
@@ -120,12 +104,12 @@
                     <h3>Kanaburger</h3>
                     <!--<p>Koostisosad: kukkel, muna, juust, tomat, salat.</p>-->
                     <p>Koostisosad:
-                        Kukkel või sai – 1 tk,
-                        Kanasnitsel – 80–100 g,
-                        Muna – 1 tk, 
-                        Juust – 1 viil, 
-                        Salatileht – 1 tk, 
-                        Tomat – 2 viilu, 
+                        Kukkel või sai – 1 tk 
+                        Kanasnitsel – 80–100 g 
+                        Muna – 1 tk 
+                        Juust – 1 viil 
+                        Salatileht – 1 tk 
+                        Tomat – 2 viilu 
                         Õli – 1 tl praadimiseks Sool ja pipar – maitse järgi.</p>
                         <p>Hind: ~ 1,5 - 2 €</p>
                     <!--<p>Valmistamine: Prae muna, pane kokku burger.</p>-->
@@ -162,16 +146,8 @@
             <div class="slide-content">
                 <div>
                     <h3>Nuudlid köögiviljade ja tofuga</h3>
-                    <p>Koostisosad:
-                        Vegan kiirnuudlid ~ 70 g,
-                        Külmutatud köögiviljasegu – 100 g,
-                        Tofu – 80 g,
-                        Õli – 1 tl,
-                        Soya kaste – 1 tl,
-                        Pipar ja küüslaugupulber – maitse järgi.</p>
-                    <p>Hind: 0,8 - 1 €</p>
-                    <p>Valmistamine:Keeda nuudlid vastavalt pakendile (umbes 3 minutit). Samal ajal kuumuta pannil õli, lisa tükeldatud tofu ja prae 2–3 minutit, kuni kergelt kuldne. Lisa külmutatud köögiviljad ja prae veel 2 minutit. Sega kõik kokku – nuudlid, tofu ja köögiviljad. Lisa sojakaste ja maitseained.</p>
-                    <p>Aeg: ~ 5-7 minutit</p>
+                    <p>Koostisosad: nuudlid, tofu, köögiviljad, sojakaste.</p>
+                    <p>Prae köögiviljad, lisa tofu ja nuudlid.</p>
                 </div>
                 <img src="images/nuudlid.png" class="slide-img" alt="Vegan nuudlid">
             </div>

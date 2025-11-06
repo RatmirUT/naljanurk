@@ -153,3 +153,41 @@ footer {
     padding-top: 10px;
   }
 }
+
+/* --- Carousel Blocks --- */
+.carousel {
+    background-color: #15BFD2;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.carousel-slide {
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.slide-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.slide-img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
