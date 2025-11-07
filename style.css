@@ -185,9 +185,27 @@ footer {
 
 .arrow {
     position: absolute;
-    right: 15px;
+    right: -25px; /* moved outside */
     top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    color: #15BFD2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
     user-select: none;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
+
+.arrow:hover {
+    background-color: #e6faff;
+    transform: translateY(-50%) scale(1.1);
+}
+
