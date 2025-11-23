@@ -153,3 +153,59 @@ footer {
     padding-top: 10px;
   }
 }
+
+/* --- Carousel Blocks --- */
+.carousel {
+    background-color: #15BFD2;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.carousel-slide {
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.slide-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.slide-img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.arrow {
+    position: absolute;
+    right: -25px; /* moved outside */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    color: #15BFD2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.arrow:hover {
+    background-color: #e6faff;
+    transform: translateY(-50%) scale(1.1);
+}
+
