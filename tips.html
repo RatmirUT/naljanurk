@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NäljaNurk - Säästunippid</title>
+    <title>NäljaNurk - Säästunipid</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +18,17 @@
                 <div class="subtitle">Tudengite retseptid, tudengite nipid.</div>
             </div>
             <nav>
-                <a href="index.html">Koduleht</a><!--nupp-->
-                <a href="recipes.html">Retseptid</a>
-            </nav>
+                <a href="index.html">Koduleht</a>
+                <div class="dropdown" id="recipesDropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
+                    <div class="dropdown-content">
+                        <a href="hommikusook.html">Hommikusöök</a>
+                        <a href="lounasook.html">Lõunasöök</a>
+                        <a href="ohtusook.html">Õhtusöök</a>
+                    </div>
+                </div>
+                <a href="tips.html">Säästunipid</a>
+</nav>
         </div>
     </header>
 <main>
@@ -126,5 +134,20 @@
     </main>
     <footer>
     </footer>
+<script>
+function toggleDropdown() {
+    document.querySelector("#recipesDropdown .dropdown-content")
+            .classList.toggle("show");
+}
+
+// закрываем меню, если пользователь кликнул вне его
+document.addEventListener("click", function(event) {
+    const dropdown = document.getElementById("recipesDropdown");
+    if (!dropdown.contains(event.target)) {
+        dropdown.querySelector(".dropdown-content").classList.remove("show");
+    }
+});
+</script>
+
 </body>
 </html>
