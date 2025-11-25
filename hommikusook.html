@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NäljaNurk - Hommikusöök</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="logo-section">
+            <div class="logo">NäljaNurk</div>
+            <div class="subtitle">Tudengite retseptid, tudengite nipid.</div>
+        </div>
+        <nav>
+                <a href="index.html">Koduleht</a>
+                <div class="dropdown" id="recipesDropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
+                    <div class="dropdown-content">
+                        <a href="hommikusook.html">Hommikusöök</a>
+                        <a href="lounasook.html">Lõunasöök</a>
+                        <a href="ohtusook.html">Õhtusöök</a>
+                    </div>
+                </div>
+                <a href="tips.html">Säästunipid</a>
+</nav>
+    </div>
+</header>
+
+<main>
+    <h1>Hommikusöögi retseptid</h1>
+
+    <h2>Kiired ja odavad hommikusöögid</h2>
+    <div class="carousel" id="breakfastCheap">
+        <div class="carousel-slide active">
+            <div class="slide-content">
+                <div>
+                    <h3>Kaerahelbepuder banaani või moosiga</h3>
+                    <p>Koostisosad: Kaerahelbed – 50 g, vesi või piim – 200 ml, näputäis soola, banaan – 1 tk.</p>
+                    <p>Hind: ~ 0,6 - 0,9 €</p>
+                    <p>Valmistamine: Keeda kaerahelbed vees või piimas 5–7 minutit, lisa sool. Lõika banaan viiludeks ja sega sisse.</p>
+                    <p>Aeg: ~10 minutit</p>
+                </div>
+                <img src="images/ban.png" class="slide-img" alt="Kaerahelbepuder">
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Röstsai muna ja juustuga</h3>
+                    <p>Lihtne idee hommikuks: röstsai, muna, juust, natuke tomatit.</p>
+                </div>
+                <img src="images/" class="slide-img" alt="Röstsai muna ja juustuga">
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Jogurt kaerahelveste ja marjadega</h3>
+                    <p>Lihtne kirjeldus – odav ja kiire hommikusöök.</p>
+                </div>
+                <img src="images/" class="slide-img" alt="Jogurti-kausi retsept">
+            </div>
+        </div>
+
+        <div class="arrow" onclick="nextSlide('breakfastCheap')">&#8250;</div>
+    </div>
+
+    <h2>Tervislikud hommikusöögid</h2>
+    <div class="carousel" id="breakfastHealthy">
+        <div class="carousel-slide active">
+            <div class="slide-content">
+                <div>
+                    <h3>Kohupiimapannkoogid</h3>
+                    <p>Koostisosad: 200 g kohupiima, 1 munakollane, 2 spl jahu, 1 tl mett, maitsestamiseks kaneel.</p>
+                    <p>Hind: ~1.5 €</p>
+                    <p>Valmistamine: Sega koostisosad, vormi väikesed pätsikesed ja prae mõlemalt poolt kuldpruuniks.</p>
+                    <p>Aeg: ~15 minutit</p>
+                </div>
+                <img src="images/paank.png" class="slide-img" alt="Kohupiimapannkoogid">
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Skyr marjade ja pähklitega</h3>
+                    <p>Täitev ja valgurikas hommikusöök.</p>
+                </div>
+                <img src="images/" class="slide-img" alt="Skyr marjadega">
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Omlett köögiviljadega</h3>
+                    <p>Lihtne kirjeldus.</p>
+                </div>
+                <img src="images/" class="slide-img" alt="Omlett köögiviljadega">
+            </div>
+        </div>
+
+        <div class="arrow" onclick="nextSlide('breakfastHealthy')">&#8250;</div>
+    </div>
+    <h2>Vegan retseptid</h2>
+    <div class="carousel" id="veganCarousel">
+        <div class="carousel-slide active">
+            <div class="slide-content">
+                <div>
+                    <h3>Nuudlid köögiviljade ja tofuga</h3>
+                    <p>Koostisosad:
+                        Vegan kiirnuudlid ~ 70 g,
+                        Külmutatud köögiviljasegu – 100 g,
+                        Tofu – 80 g,
+                        Õli – 1 tl,
+                        Soya kaste – 1 tl,
+                        Pipar ja küüslaugupulber – maitse järgi.</p>
+                    <p>Hind: 0,8 - 1 €</p>
+                    <p>Valmistamine:Keeda nuudlid vastavalt pakendile (umbes 3 minutit). Samal ajal kuumuta pannil õli, lisa tükeldatud tofu ja prae 2–3 minutit, kuni kergelt kuldne. Lisa külmutatud köögiviljad ja prae veel 2 minutit. Sega kõik kokku – nuudlid, tofu ja köögiviljad. Lisa sojakaste ja maitseained.</p>
+                    <p>Aeg: ~ 5-7 minutit</p>
+                </div>
+                <img src="images/nuudlid.png" class="slide-img" alt="Vegan nuudlid">
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Vegan retsept 2</h3>
+                    <p>Lihtne kirjeldus.</p>
+                </div>
+                <img src="images/" class="slide-img" alt="Vegan retsept 2">
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Vegan retsept 3</h3>
+                    <p>Lihtne kirjeldus.</p>
+                </div>
+                <img src="images/" class="slide-img" alt="Vegan retsept 3">
+            </div>
+        </div>
+        <div class="arrow" onclick="nextSlide('veganCarousel')">&#8250;</div>
+    </div>
+</main>
+
+<script>
+function nextSlide(id) {
+    const carousel = document.getElementById(id);
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    let index = [...slides].findIndex(s => s.classList.contains('active'));
+    slides[index].classList.remove('active');
+    slides[(index + 1) % slides.length].classList.add('active');
+}
+</script>
+
+<footer></footer>
+<script>
+function toggleDropdown() {
+    document.querySelector("#recipesDropdown .dropdown-content")
+            .classList.toggle("show");
+}
+
+// закрываем меню, если пользователь кликнул вне его
+document.addEventListener("click", function(event) {
+    const dropdown = document.getElementById("recipesDropdown");
+    if (!dropdown.contains(event.target)) {
+        dropdown.querySelector(".dropdown-content").classList.remove("show");
+    }
+});
+</script>
+
+</body>
+</html>
