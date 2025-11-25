@@ -208,4 +208,51 @@ footer {
     background-color: #e6faff;
     transform: translateY(-50%) scale(1.1);
 }
+/* =============== DROPDOWN =============== */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
+.dropbtn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    font-family: "Rochester", cursive;
+    font-style: italic;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Прячем меню по умолчанию */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 10;
+}
+
+/* Внутренние ссылки */
+.dropdown-content a {
+    color: #15BFD2;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #e6faff;
+}
+
+/* класс, который Показивает меню */
+.show {
+    display: block;
+}
