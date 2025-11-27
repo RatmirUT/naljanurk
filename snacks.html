@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NäljaNurk - Snäkk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="logo-section">
+            <div class="logo">NäljaNurk</div>
+            <div class="subtitle">Tudengite retseptid, tudengite nipid.</div>
+        </div>
+        <nav>
+                <a href="index.html">Koduleht</a>
+                <div class="dropdown" id="recipesDropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
+                    <div class="dropdown-content">
+                        <a href="hommikusook.html">Hommikusöök</a>
+                        <a href="lounasook.html">Lõunasöök</a>
+                        <a href="ohtusook.html">Õhtusöök</a>
+                        <a href="snacks.html">Snäkk</a>
+                    </div>
+                </div>
+                <a href="tips.html">Säästunipid</a>
+</nav>
+    </div>
+</header>
+
+<main>
+    <h1>Snäkk</h1>
+
+    <h2>Kiired ja odavad snäkkid</h2>
+    <div class="carousel" id="breakfastCheap">
+        <div class="carousel-slide active">
+            <div class="slide-content">
+                <div>
+                    <h3>Banaanipannkoogid</h3>
+                    <p>Koostisosad:<br> 
+                        1 küps banaan (mida pehmem, seda parem),<br>
+                        1 suur muna,<br>
+                        1 tl õli või võid praadimiseks,<br>
+                        Soovi korral: veidi kaneeli või vanillisuhkrut.</p>
+                    <p>Hind: ~ 0,8 €</p>
+                    <p>Valmistamine: Koori banaan ja purusta see kahvliga.Löö muna sisse ja sega korralikult, kuni segu muutub kreemjaks ja vedelaks.Kuumuta pannil 1 tl õli madalal kuni keskmisel kuumusel.Vala pannile väikesed tainalapid (umbes 2 supilusikatäit ühe koogi kohta).Küpseta 1–2 minutit ühelt poolt, kuni servad hakkavad tahenema ja all on kuldpruun.Pööra ettevaatlikult ja küpseta veel 30–60 sekundit teiselt poolt.</p>
+                    <p>Aeg: ~ 8 minutit</p>
+                </div>
+                <img src="images/ban.png" class="slide-img" alt="Banaanipannkoogid">
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Kohupiim marjadega</h3>
+                    <p>Koostisosad:<br>
+                        150 g kohupiima (tavaline või lahja),<br>
+                        50–80 g marju (värsked või külmutatud: maasikad, mustikad, vaarikad),<br>
+                        1 tl mett või 1 tl suhkrut (soovi korral),<br>
+                        Veidi vanillisuhkrut või kaneeli (soovi korral).</p>
+                    <p>Hind: ~ 0,8 - 1 €</p>
+                    <p>Valmistamine: Pane kohupiim kaussi.Lisa peale marjad.Sega kergelt või jäta kihiliseks — mõlemad variandid sobivad.Magusta meega või suhkruga, kui soovid.</p>
+                    <p>Aeg: ~ 5 minutit</p>
+                </div>
+                <img src="images/" class="slide-img" alt="Kohupiim marjadega">
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Kohupiimad ja jogurtijoogid</h3>
+                    <p>Näited poest:<br>
+                        Farmi joogijogurt,<br>
+                        Tere Kohupiim,<br>
+                        Alma Kreeka jogurt,<br>
+                        Valio PROfeel proteiinijogurt,<br>
+                        Alma puding.</p>
+                    <p>Hind: ~ 0,7 - 1 €</p>
+                </div>
+                <img src="images/" class="slide-img" alt="Kohupiimad ja jogurtijoogid">
+            </div>
+        </div>
+
+        <div class="arrow" onclick="nextSlide('breakfastCheap')">&#8250;</div>
+    </div>
+
+    <h2>Tervislikud snäkkid</h2>
+    <div class="carousel" id="breakfastHealthy">
+        <div class="carousel-slide active">
+            <div class="slide-content">
+                <div>
+                    <h3>Banaan kodujuustuga</h3>
+                    <p>Koostisosad: <br>
+                        1 banaan,<br>
+                        100 g kodujuustu,<br>
+                        Natuke mett või kaneeli (soovi korral).</p>
+                    <p>Hind: ~ 0,7 €</p>
+                    <p>Valmistamine: Lõika banaan viiludeks ja lisa peale kodujuust.Soovi korral lisa veidi mett või kaneeli maitseks.</p>
+                    <p>Aeg: ~ 2 minutit</p>
+                </div>
+                <img src="images/paank.png" class="slide-img" alt="Banaan kodujuustuga">
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Kreeka jogurt kama pallidega</h3>
+                    <p>Koostisosad:<br>
+                        150 g maitsestamata Kreeka jogurtit või Skyr’i,<br>
+                        2–3 spl Kama pallid,<br>
+                        1 tl maapähklivõid  (soovi korral),<br>
+                        ½ mõõtu proteiinipulbrit (soovi korral),<br>
+                        Magustajaks natuke mett või banaaniviilud.</p>
+                    <p>Hind: ~ 1,8 €</p>
+                    <p>Valmistamine: Pane jogurt kaussi ja liisa Kama pallid.Soovi korral lisa proteiinipulber ja maapähklivõi.Kaunista banaaniviilude või marjadega.</p>
+                    <p>Aeg: ~ 5 minutit</p>
+                </div>
+                <img src="images/" class="slide-img" alt="Kreeka jogurt kama pallidega">
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Kiirsnäkk poest kaasa</h3>
+                    <p>Näited poest:<br>
+                        Seakamarakrõpsud,<br>
+                        Rakvere Snäkk Pro Õllesigar,<br>
+                        Proteinipuding või -jook,<br>
+                        Beef Jerky,<br>
+                        Nick’s proteiinibatoon</p>
+                    <p>Hind: ~ 1,25 - 2,5 €</p>
+                </div>
+                <img src="images/" class="slide-img" alt="Kiirsnäkk poest kaasa">
+            </div>
+        </div>
+
+        <div class="arrow" onclick="nextSlide('breakfastHealthy')">&#8250;</div>
+    </div>
+    <h2>Vegan snäkkid</h2>
+    <div class="carousel" id="veganCarousel">
+        <div class="carousel-slide active">
+            <div class="slide-content">
+                <div>
+                    <h3>Porgandipulgad hummusega</h3>
+                    <p>Koostisosad:<br>
+                        Porgand – 1 tk,<br>
+                        Hummus – 2 sl</p>
+                    <p>Hind: 0,8 €</p>
+                    <p>Valmistamine: Lõika porgand pulkadeks ja paki väiksesse karpi koos hummusega.</p>
+                    <p>Aeg: ~ 2 minutit</p>
+                </div>
+                <img src="images/veganhm1.png" class="slide-img" alt="Porgandipulgad hummusega">
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Röstsepik maapähklivõide ja banaaniga</h3>
+                    <p>Koostisosad:<br>
+                        1 täistera röstsepik või leivaviil,<br>
+                        1–1,5 sl maapähklivõid,<br>
+                        1 banaan.</p>
+                    <p>Hind: 0,2 - 0,3 €</p>
+                    <p>Valmistamine: Rösti sai kergelt kuldpruuniks, määri sellele maapähklivõi ja aseta peale banaaniviilud. Soovi korral lisa veidi mett või kaneeli.</p>
+                    <p>Aeg: ~ 2 minutit</p>
+                </div>
+                <img src="images/veganhm2.png" class="slide-img" alt="Röstsepik maapähklivõide ja banaaniga">
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <div>
+                    <h3>Jogurt banaaniviiludega</h3>
+                    <p>Koostisosad:<br>
+                        150 g vegan jogurtit,<br>
+                        ½ banaani.</p>
+                    <p>Hind: 0,65 €</p>
+                    <p>Valmistamine: Võta kauss, lisa naturaalne jogurt ja lõika sinna sisse banaaniviilud. Sega kergelt läbi või jäta kihiti — soovi korral võid peale panna mett või müsli.</p>
+                    <p>Aeg: ~ 2 minutit</p>
+                </div>
+                <img src="images/veganhm3.png" class="slide-img" alt="Jogurt banaaniviiludega">
+            </div>
+        </div>
+        <div class="arrow" onclick="nextSlide('veganCarousel')">&#8250;</div>
+    </div>
+</main>
+
+<script>
+function nextSlide(id) {
+    const carousel = document.getElementById(id);
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    let index = [...slides].findIndex(s => s.classList.contains('active'));
+    slides[index].classList.remove('active');
+    slides[(index + 1) % slides.length].classList.add('active');
+}
+</script>
+
+<footer></footer>
+<script>
+function toggleDropdown() {
+    document.querySelector("#recipesDropdown .dropdown-content")
+            .classList.toggle("show");
+}
+
+// закрываем меню, если пользователь кликнул вне его
+document.addEventListener("click", function(event) {
+    const dropdown = document.getElementById("recipesDropdown");
+    if (!dropdown.contains(event.target)) {
+        dropdown.querySelector(".dropdown-content").classList.remove("show");
+    }
+});
+</script>
+
+</body>
+</html>
