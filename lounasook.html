@@ -16,7 +16,7 @@
             <div class="logo">NäljaNurk</div>
             <div class="subtitle">Tudengite retseptid, tudengite nipid.</div>
         </div>
-       <nav>
+        <nav>
                 <a href="index.html">Koduleht</a>
                 <div class="dropdown" id="recipesDropdown">
                     <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
@@ -24,6 +24,7 @@
                         <a href="hommikusook.html">Hommikusöök</a>
                         <a href="lounasook.html">Lõunasöök</a>
                         <a href="ohtusook.html">Õhtusöök</a>
+                        <a href="snacks.html">Snäkk</a>
                     </div>
                 </div>
                 <a href="tips.html">Säästunipid</a>
@@ -34,115 +35,194 @@
 <main>
     <h1>Lõunasöögi retseptid</h1>
 
-    <h2>Odavad lõunasöögid</h2>
-    <div class="carousel" id="lunchCheap">
+    <h2>Kiired ja odavad lõunasöögid</h2>
+    <div class="carousel" id="breakfastCheap">
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
-                    <h3>Nuudlid köögiviljade ja tofuga</h3>
-                    <p>Koostisosad: vegan kiirnuudlid, külmutatud köögiviljasegu, tofu, õli, sojakaste.</p>
-                    <p>Hind: 0,8 - 1 €</p>
-                    <p>Valmistamine: keeda nuudlid, prae tofu ja köögiviljad, sega kõik kokku ja lisa sojakaste.</p>
-                    <p>Aeg: ~ 5–7 minutit</p>
+                    <h3>Kartuli-liha-juustu vorm</h3>
+                    <p>Koostisosad:<br> 
+                        Kartulid – 2 tk (~200 g),<br> 
+                        Hakkliha – 100 g,<br> 
+                        Juust – 40 g,<br> 
+                        Piim – 50 ml,<br> 
+                        Sibul – ½ tk (soovi korral),<br> 
+                        Õli – 1 tl,<br> 
+                        Sool ja pipar – maitse järgi</p>
+                    <p>Hind: ~ 1,2 - 1,4 €</p>
+                    <p>Valmistamine:Prae hakkliha õlis koos hakitud sibulaga, kuni liha on pruunistunud.Viiluta kartulid ja aseta ahjuvormi (või mikrolaineahjule sobivasse anumasse).Lisa peale praetud liha, maitseained ja riivitud juust.Vala üle piimaga ja küpseta 200°C juures umbes 15 minutit (või mikrolaineahjus 6–7 minutit).</p>
+                    <p>Aeg: ~ 25 minutit</p>
                 </div>
-                <img src="images/nuudlid.png" class="slide-img" alt="Nuudlid köögiviljade ja tofuga">
+                <img src="images/ban.png" class="slide-img" alt="Kartuli-liha-juustu vorm">
             </div>
         </div>
 
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
-                    <h3>Lihtne pastaroog</h3>
-                    <p>Odav pasta köögiviljade või tomatikastmega.</p>
+                    <h3>Makaronid hakklihaga</h3>
+                    <p>Koostisosad:<br> 
+                        Makaronid – 120 g,<br> 
+                        Hakkliha – 100 g,<br> 
+                        Sibul – ½ tk,<br> 
+                        Tomatipasta või purustatud tomatid – 2 sl,<br> 
+                        Õli – 1 tl,<br> 
+                        Sool ja pipar – maitse järgi</p>
+                    <p>Hind: ~ 1,2 - 1,4 €</p>
+                    <p>Valmistamine:Keeda makaronid soolaga maitsestatud vees.Prae pannil õlis hakitud sibul ja lisa hakkliha. Küpseta 5–6 minutit, kuni liha on pruunistunud.Lisa tomatipasta, sega ja hauta 2–3 minutit.Sega kastme hulka keedetud makaronid ja kuumuta koos veel minut.</p>
+                    <p>Aeg: ~ 15 minutit</p>
                 </div>
-                <img src="images/" class="slide-img" alt="Lihtne pastaroog">
+                <img src="images/Kuumad juustu-singivõileivad.png" class="slide-img" alt="Makaronid hakklihaga">
             </div>
         </div>
 
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
-                    <h3>Riis köögiviljade ja munaga</h3>
-                    <p>Lihtne kirjeldus.</p>
+                    <h3>Munariis köögiviljadega</h3>
+                    <p>Koostisosad:<br>
+                        Keedetud riis – 150 g (võib olla eilne),<br>
+                        Muna – 1–2 tk,<br>
+                        Külmutatud köögiviljasegu – 100 g,<br>
+                        Õli – 1 tl,<br>
+                        Soya kaste või sool ja pipar</p>
+                    <p>Hind: ~ 0,6 - 0,7 €</p>
+                    <p>Valmistamine: Kuumuta pannil õli ja lisa köögiviljad. Prae 3–4 minutit.Lisa riis ja sega läbi.Löö muna pannile ja sega kõik kiiresti kokku, kuni muna on hüübinud.Maitsesta sojakastme või soolaga.</p>
+                    <p>Aeg: ~ 10 minutit</p>
                 </div>
-                <img src="images/" class="slide-img" alt="Riis köögiviljadega">
+                <img src="images/" class="slide-img" alt="Munariis köögiviljadega retsept">
             </div>
         </div>
 
-        <div class="arrow" onclick="nextSlide('lunchCheap')">&#8250;</div>
+        <div class="arrow" onclick="nextSlide('breakfastCheap')">&#8250;</div>
     </div>
 
     <h2>Tervislikud lõunasöögid</h2>
-    <div class="carousel" id="lunchHealthy">
+    <div class="carousel" id="breakfastHealthy">
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
-                    <h3>Salat kanaga</h3>
-                    <p>Lihtne salat kana, köögiviljade ja täisteraleivaga.</p>
+                    <h3>Koorene kana-seene pasta</h3>
+                    <p>Koostisosad: <br>
+                        100 g täisterapastat,<br>
+                        150 g kanafileed,<br>
+                        100 g šampinjonid,<br>
+                        100 ml maitsestamata Kreeka jogurtit või 10% koort,<br>
+                        1 küüslauguküüs,<br>
+                        ½ sibulat,<br>
+                        1 tl oliiviõli,<br>
+                        Sool, pipar, maitseroheline (nt basiilik või petersell)</p>
+                    <p>Hind: ~ 2,5 €</p>
+                    <p>Valmistamine: Keeda pasta vastavalt pakendi juhistele.Lõika kanafilee ribadeks ja prae oliiviõlis kuldseks.Lisa tükeldatud sibul ja küüslauk, seejärel seened, ning hauta kuni pehmenemiseni.Sega juurde Kreeka jogurt või koor, maitsesta soola ja pipraga.Lisa keedetud pasta pannile, sega kõik kokku ja lase 1–2 minutit madalal kuumusel maitsetel seguneda.Serveeri värske maitserohelisega.</p>
+                    <p>Aeg: ~ 20 minutit</p>
                 </div>
-                <img src="images/" class="slide-img" alt="Kana-salat">
+                <img src="images/" class="slide-img" alt="Koorene kana-seene pasta">
             </div>
         </div>
 
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
-                    <h3>Köögiviljasupp</h3>
-                    <p>Madalate kuludega ja täitev supp.</p>
+                    <h3>Kookosemaitseline kana riisiga</h3>
+                    <p>Koostisosad:<br>
+                        150 g kanafileed,<br> 
+                        ½ sibulat,<br>
+                        1 küüslauguküüs,<br>
+                        150 ml kookospiima,<br>
+                        1 tl oliiviõli,<br>
+                        80 g riisi,<br>
+                        Sool, pipar, karri või kurkum maitse järgi,<br>
+                        Maitseroheline (nt koriander või petersell)</p>
+                    <p>Hind: ~ 2,8 €</p>
+                    <p>Valmistamine: Keeda riis vastavalt pakendi juhistele.Lõika kanafilee tükkideks ja prae oliiviõlis kuldseks.Lisa hakitud sibul ja küüslauk ja kuumuta kuni pehmenemiseni.Vala juurde kookospiim, lisa maitseained ning hauta 5–7 minutit madalal kuumusel.Serveeri koos riisiga ja puista peale värske maitseroheline.</p>
+                    <p>Aeg: ~ 25 minutit</p>
                 </div>
-                <img src="images/" class="slide-img" alt="Köögiviljasupp">
+                <img src="images/kaera.jpg" class="slide-img" alt="Kookosemaitseline kana riisiga">
             </div>
         </div>
 
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
-                    <h3>Ahjuköögiviljad ja kikerherned</h3>
-                    <p>Lihtne kirjeldus.</p>
+                    <h3>Tuunikalapasta tomatikastmega</h3>
+                    <p>Koostisosad:<br>
+                        100 g täisterapastat,<br>
+                        1 purk Rimi tuunikala tomatikastmes,<br>
+                        ½ sibulat (soovi korral),<br>
+                        1 tl oliiviõli või tilk vett praadimiseks,<br>
+                        Sool, pipar, basiilik või oregano,<br>
+                        Soovi korral riivjuust</p>
+                    <p>Hind: ~ 2 €</p>
+                    <p>Valmistamine: Keeda pasta vastavalt pakendi juhistele.Kui soovid rohkem maitset, kuumuta pannil veidi õli ja lisa hakitud sibul.Lisa tuunikala tomatikastmes otse pannile ja kuumuta 2–3 minutit.Sega juurde keedetud pasta ja maitsesta ürtidega.Serveeri riivjuustu ja basiilikuga, kui on.</p>
+                    <p>Aeg: ~ 15 minutit</p>
                 </div>
-                <img src="images/" class="slide-img" alt="Ahjuköögiviljad">
+                <img src="images/Öökaerahelbed proteiiniga.png" class="slide-img" alt="Tuunikalapasta tomatikastmega">
             </div>
         </div>
 
-        <div class="arrow" onclick="nextSlide('lunchHealthy')">&#8250;</div>
+        <div class="arrow" onclick="nextSlide('breakfastHealthy')">&#8250;</div>
     </div>
-
-    <h2>Vegan retseptid</h2>
+    <h2>Vegan lõunasöögid</h2>
     <div class="carousel" id="veganCarousel">
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
-                    <h3>Nuudlid köögiviljade ja tofuga</h3>
-                    <p>Koostisosad:
-                        Vegan kiirnuudlid ~ 70 g,
-                        Külmutatud köögiviljasegu – 100 g,
-                        Tofu – 80 g,
-                        Õli – 1 tl,
-                        Soya kaste – 1 tl,
-                        Pipar ja küüslaugupulber – maitse järgi.</p>
-                    <p>Hind: 0,8 - 1 €</p>
-                    <p>Valmistamine:Keeda nuudlid vastavalt pakendile (umbes 3 minutit). Samal ajal kuumuta pannil õli, lisa tükeldatud tofu ja prae 2–3 minutit, kuni kergelt kuldne. Lisa külmutatud köögiviljad ja prae veel 2 minutit. Sega kõik kokku – nuudlid, tofu ja köögiviljad. Lisa sojakaste ja maitseained.</p>
-                    <p>Aeg: ~ 5-7 minutit</p>
+                    <h3>Panniroog Thormi haksiga</h3>
+                    <p>Koostisosad:<br>
+                        160 g kartulit,<br>
+                        85 g Thormi haksi,<br>
+                        1 paprika,<br>
+                        1–2 marineeritud kurki,<br>
+                        Õli praadimiseks,<br>
+                        Sool, pipar, maitseained (nt Cajun maitseainesegu)</p>
+                    <p>Hind: 1,8 - 2,7 €</p>
+                    <p>Valmistamine:Haki paprika ja marineeritud kurk.Kuumuta pannil õli, lisa kartulitükid ja prae kuni peaaegu valmis.Lisa panusse Thormi haks, paprika ning jätka kuumutamist kuni kõik on läbi kuumenenud.Maitsesta soola, pipra ning maitseainetega.</p>
+                    <p>Aeg: ~ 20 - 25 minutit</p>
                 </div>
-                <img src="images/nuudlid.png" class="slide-img" alt="Vegan nuudlid">
+                <img src="images/veganhm1.png" class="slide-img" alt="Panniroog Thormi haksiga">
             </div>
         </div>
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
-                    <h3>Vegan retsept 2</h3>
-                    <p>Lihtne kirjeldus.</p>
+                    <h3>Riis vürtsika kõrvitsakastmega</h3>
+                    <p>Koostisosad:<br>
+                        150 g riisi,<br>
+                        250 g kõrvitsat (kooritud ja tükeldatud),<br>
+                        1 sibul,<br>
+                        1 küüslauguküüs,<br>
+                        150 ml kookospiima,<br>
+                        1 tl karri või kurkumi-maitseainesegu,<br>
+                        1 tl tšillipulbrit või veidi värsket tšillit,<br>
+                        1 sl õli,<br>
+                        Sool ja pipar,<br>
+                        Värske koriander või petersell (soovi korral)</p>
+                    <p>Hind: 2 - 2,7 €</p>
+                    <p>Valmistamine:Keeda riis pakendi juhiste järgi.Haki sibul ja küüslauk, tükelda kõrvits.Kuumuta pannil õli, prae sibul ja küüslauk klaasjaks.Lisa kõrvits ja maitseained, kuumuta paar minutit.Vala peale kookospiim, kata kaanega ja hauta 10–15 minutit, kuni kõrvits on pehme.Püreesta kaste kreemjaks või jäta tükiline.</p>
+                    <p>Aeg: ~ 20 - 25 minutit</p>
                 </div>
-                <img src="images/" class="slide-img" alt="Vegan retsept 2">
+                <img src="images/veganhm2.png" class="slide-img" alt="Riis vürtsika kõrvitsakastmega">
             </div>
         </div>
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
-                    <h3>Vegan retsept 3</h3>
-                    <p>Lihtne kirjeldus.</p>
+                    <h3>Oad kikerherneste ja avokaadoga</h3>
+                    <p>Koostisosad:<br>
+                        75 g keedetud ube,<br>
+                        75 g kikerherneid,<br>
+                        1/2 küpset avokaadot,<br>
+                        1/4 punast sibulat,<br>
+                        1/2 tomatit või 3–4 kirsstomatit,<br>
+                        1 tl oliiviõli,<br>
+                        1 tl sidruni- või laimimahla,<br>
+                        Sool ja pipar,<br>
+                        Veidi maitserohelist</p>
+                    <p>Hind: 1,5 - 2 €</p>
+                    <p>Valmistamine:Loputa oad ja kikerherned, lase nõrguda.Lõika avokaado kuubikuteks, haki sibul ja tomat.Sega kõik koostisosad kausis.Lisa oliiviõli, sidrunimahl, sool ja pipar.Puista peale maitserohelist ja serveeri.</p>
+                    <p>Aeg: ~ 10 - 15 minutit</p>
                 </div>
-                <img src="images/" class="slide-img" alt="Vegan retsept 3">
+                <img src="images/veganhm3.png" class="slide-img" alt="Oad kikerherneste ja avokaadoga">
             </div>
         </div>
         <div class="arrow" onclick="nextSlide('veganCarousel')">&#8250;</div>
