@@ -2,9 +2,14 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
+    <!-- Lehe laiuse ja skaleerimise seadistus (et mobiilis ka ilus oleks) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NäljaNurk - Hommikusöök</title>
+
+    <!-- Seos välise CSS failiga -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google fonti laadimiseks vajalikud read -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
@@ -12,31 +17,45 @@
 <body>
 <header>
     <div class="header-content">
+        <!-- Logo ja alampealkiri vasakul -->
         <div class="logo-section">
             <div class="logo">NäljaNurk</div>
             <div class="subtitle">Tudengite retseptid, tudengite nipid.</div>
         </div>
+        <!-- Navigeerimismenüü (üleval paremal) -->
         <nav>
                 <a href="index.html">Koduleht</a>
+
+                <!-- Rippmenüü "Retseptid" jaoks -->
                 <div class="dropdown" id="recipesDropdown">
+                    <!-- Nupp, millele vajutades rippmenüü avaneb/sulgub -->
                     <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
                     <div class="dropdown-content">
+                        <!-- Erinevad retseptide lehed -->
                         <a href="hommikusook.html">Hommikusöök</a>
                         <a href="lounasook.html">Lõunasöök</a>
                         <a href="ohtusook.html">Õhtusöök</a>
                         <a href="snacks.html">Snäkk</a>
                     </div>
                 </div>
+
+                <!-- Teine tavalingileht -->
                 <a href="tips.html">Säästunipid</a>
-</nav>
+        </nav>
     </div>
 </header>
 
 <main>
+    <!-- Lehe põhitiitel -->
     <h1>Hommikusöögi retseptid</h1>
 
+    <!-- ESIMENE KARUSSELL: "Kiired ja odavad hommikusöögid" -->
     <h2>Kiired ja odavad hommikusöögid</h2>
+
+    <!-- Karuselli konteiner, millel on unikaalne id -->
     <div class="carousel" id="breakfastCheap">
+        <!-- Iga .carousel-slide on üks "kaart" karussellis -->
+        <!-- Esimene slaid on aktiivne (nähtav), seetõttu class="active" -->
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
@@ -50,6 +69,7 @@
                     <p>Valmistamine: Keeda kaerahelbed vees või piimas 5–7 minutit, lisa sool. Lõika banaan viiludeks ja sega sisse.</p>
                     <p>Aeg: ~ 10 minutit</p>
                 </div>
+                <!-- Pildi silt, src viitab pildifailile -->
                 <img src="images/ban.png" class="slide-img" alt="Kaerahelbepuder">
             </div>
         </div>
@@ -65,7 +85,9 @@
                         Tomat – 1 tk,<br>
                         Või / toorjust– 1 tl.</p>
                     <p>Hind: ~ 1 €</p>
-                    <p>Valmistamine: Määri leivaviilud kergelt võiga.Aseta peale sink, juust ja tomativiil.Pane teine leivaviil peale (võid ka teha avatud versiooni).Küpseta pannil või kuumuta mikrolaineahjus, kuni juust sulab ja leib muutub kuldseks (pannil umbes 3–4 minutit, mikrolaineahjus 1–2 minutit).</p>
+                    <p>Valmistamine: Määri leivaviilud kergelt võiga. Aseta peale sink, juust ja tomativiil. 
+                       Pane teine leivaviil peale (võid ka teha avatud versiooni). 
+                       Küpseta pannil või kuumuta mikrolaineahjus, kuni juust sulab ja leib muutub kuldseks (pannil umbes 3–4 minutit, mikrolaineahjus 1–2 minutit).</p>
                     <p>Aeg: ~ 10 minutit</p>
                 </div>
                 <img src="images/Kuumad juustu-singivõileivad.png" class="slide-img" alt="Röstsai muna ja juustuga">
@@ -82,16 +104,23 @@
                         Õun või banaan – ½ tk,<br>
                         Soovi korral: Natuke mett või kaneeli.</p>
                     <p>Hind: ~ 0,6 - 0,9 €</p>
-                    <p>Valmistamine: Pane kaussi jogurt ja lisa kaerahelbed või müsli.Lõika peale õuna- või banaanitükid.Soovi korral lisa veidi mett või kaneeli. Sega või söö kihiliselt.</p>
+                    <p>Valmistamine: Pane kaussi jogurt ja lisa kaerahelbed või müsli.
+                       Lõika peale õuna- või banaanitükid.
+                       Soovi korral lisa veidi mett või kaneeli. Sega või söö kihiliselt.</p>
                     <p>Aeg: ~ 3 minutit</p>
                 </div>
                 <img src="images/Jogurti-kausike.png" class="slide-img" alt="Jogurti-kausi retsept">
             </div>
         </div>
 
+        <!-- Vasak nool – kutsub välja prevSlide funktsiooni ja annab kaasa selle karusselli ID -->
+        <div class="arrow arrow-left" onclick="prevSlide('breakfastCheap')">&#8249;</div>
+
+        <!-- Parem nool – nextSlide sama karusselli jaoks -->
         <div class="arrow" onclick="nextSlide('breakfastCheap')">&#8250;</div>
     </div>
 
+    <!-- TEINE KARUSSELL: "Tervislikud hommikusöögid" -->
     <h2>Tervislikud hommikusöögid</h2>
     <div class="carousel" id="breakfastHealthy">
         <div class="carousel-slide active">
@@ -123,7 +152,9 @@
                         Näputäis soola ja kaneeli,<br>
                         Soovi korral: 1 tl maapähklivõid või valgu pulbrit.</p>
                     <p>Hind: ~ 1.5 €</p>
-                    <p>Valmistamine: Pane kõik koostisosad blenderisse ja sega ühtlaseks.Küpseta pannil madalal kuumusel kuni kuldpruun.Serveeri marjade, kohupiima või kreeka jogurtiga.</p>
+                    <p>Valmistamine: Pane kõik koostisosad blenderisse ja sega ühtlaseks.
+                       Küpseta pannil madalal kuumusel kuni kuldpruun.
+                       Serveeri marjade, kohupiima või kreeka jogurtiga.</p>
                     <p>Aeg: ~ 10 minutit</p>
                 </div>
                 <img src="images/kaera.jpg" class="slide-img" alt="Skyr marjadega">
@@ -141,15 +172,22 @@
                         Banaan – ½ tk või 1 tl maapähklivõid,<br>
                         Kaneel või väike kogus mett (soovi korral)</p>
                     <p>Hind: ~ 0,75 - 0,90 €</p>
-                    <p>Valmistamine: Pane kaerahelbed, proteiinipulber ja piim purki või anumasse.Lisa banaaniviilud või maapähklivõi.Sega ühtlaseks, kata kaanega ja pane külmkappi ööseks.Hommikul sega uuesti ja soovi korral kuumuta 1 minut mikrolaineahjus.</p>
+                    <p>Valmistamine: Pane kaerahelbed, proteiinipulber ja piim purki või anumasse.
+                       Lisa banaaniviilud või maapähklivõi.
+                       Sega ühtlaseks, kata kaanega ja pane külmkappi ööseks.
+                       Hommikul sega uuesti ja soovi korral kuumuta 1 minut mikrolaineahjus.</p>
                     <p>Aeg: ~ 1 minutit</p>
                 </div>
                 <img src="images/Öökaerahelbed proteiiniga.png" class="slide-img" alt="Omlett köögiviljadega">
             </div>
         </div>
 
+        <!-- Nooled teise karusselli jaoks -->
+        <div class="arrow arrow-left" onclick="prevSlide('breakfastHealthy')">&#8249;</div>
         <div class="arrow" onclick="nextSlide('breakfastHealthy')">&#8250;</div>
     </div>
+
+    <!-- KOLMAS KARUSSELL: "Vegan hommikusöögid" -->
     <h2>Vegan hommikusöögid</h2>
     <div class="carousel" id="veganCarousel">
         <div class="carousel-slide active">
@@ -165,12 +203,18 @@
                         1 tl vegan-võid või 1 tl kookosõli (valikuline, lisab kreemisust),<br>
                         Lisandiks: banaaniviilud, marjad või pähklid</p>
                     <p>Hind: 0,7 - 1,2 €</p>
-                    <p>Valmistamine:Kuumuta taimne piim potis.Lisa kaerahelbed ja sool, sega.Kui segu hakkab keema, lisa kakaopulber, suhkur ja sega ühtlaseks.Keeda tasasel tulel 5–8 minutit, kuni puder pakseneb.Lõpus lisa vegan-või või kookosõli, et puder muutuks eriti kreemiseks.Serveeri banaani, marjade või muude lisanditega.</p>
+                    <p>Valmistamine: Kuumuta taimne piim potis.
+                       Lisa kaerahelbed ja sool, sega.
+                       Kui segu hakkab keema, lisa kakaopulber, suhkur ja sega ühtlaseks.
+                       Keeda tasasel tulel 5–8 minutit, kuni puder pakseneb.
+                       Lõpus lisa vegan-või või kookosõli, et puder muutuks eriti kreemiseks.
+                       Serveeri banaani, marjade või muude lisanditega.</p>
                     <p>Aeg: ~ 10 minutit</p>
                 </div>
                 <img src="images/veganhm1.png" class="slide-img" alt="Vegan nuudlid">
             </div>
         </div>
+
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
@@ -183,12 +227,17 @@
                         1 tl sidrunimahla (soovi korral),<br>
                         Tšillihelbed (soovi korral)</p>
                     <p>Hind: 2 - 2,7 €</p>
-                    <p>Valmistamine:Rösti sepikuviil kuldpruuniks. Lõika või suru kahvliga avokaado lahti ja määri sepiku peale.Maitsesta soola, pipra ja sidrunimahlaga. Soovi korral lisa ka tšillihelbeid.Serveeri kohe, kui tahad – lisandina võib kasutada tomativiile või seemneid.</p>
+                    <p>Valmistamine: Rösti sepikuviil kuldpruuniks.
+                       Lõika või suru kahvliga avokaado lahti ja määri sepiku peale.
+                       Maitsesta soola, pipra ja sidrunimahlaga. 
+                       Soovi korral lisa ka tšillihelbeid.
+                       Serveeri kohe, kui tahad – lisandina võib kasutada tomativiile või seemneid.</p>
                     <p>Aeg: ~ 5 minutit</p>
                 </div>
                 <img src="images/veganhm2.png" class="slide-img" alt="Vegan retsept 2">
             </div>
         </div>
+
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
@@ -200,36 +249,61 @@
                         40 g taimne jogurt,<br>
                         Soovi korral: taimne piim või vesi, magustaja, marjad kaunistuseks</p>
                     <p>Hind: 1 - 1,6 €</p>
-                    <p>Valmistamine:Loo alustuseks blenderis segu: kaerahelbed + banaan + kreemjas koostisosa + väike kogus vedelikku (nt taimne piim).Blenderda kuni ühtlaseks ja kreemjaks.Vala kaussi, puista peale kõrvitsaseemned ja soovi korral lisa marju või banaaniviile.</p>
+                    <p>Valmistamine: Loo alustuseks blenderis segu: kaerahelbed + banaan + kreemjas koostisosa + väike kogus vedelikku (nt taimne piim).
+                       Blenderda kuni ühtlaseks ja kreemjaks.
+                       Vala kaussi, puista peale kõrvitsaseemned ja soovi korral lisa marju või banaaniviile.</p>
                     <p>Aeg: ~ 5-7 minutit</p>
                 </div>
                 <img src="images/veganhm3.png" class="slide-img" alt="Vegan retsept 3">
             </div>
         </div>
+
+        <!-- Nooled kolmanda karusselli jaoks -->
+        <div class="arrow arrow-left" onclick="prevSlide('veganCarousel')">&#8249;</div>
         <div class="arrow" onclick="nextSlide('veganCarousel')">&#8250;</div>
     </div>
 </main>
 
+<!-- Karusselli liigutamise JavaScript -->
 <script>
 function nextSlide(id) {
+    // Leiame karusselli vastava id järgi
+    const carousel = document.getElementById(id);
+    // Võtame kõik slaidid selles karussellis
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    // Leiame, millisel slaidil praegu on klass "active"
+    let index = [...slides].findIndex(s => s.classList.contains('active'));
+    // Eemaldame aktiivsuse praeguselt slaidilt
+    slides[index].classList.remove('active');
+    // Lisame aktiivsuse järgmisele slaidile (tsükliliselt)
+    slides[(index + 1) % slides.length].classList.add('active');
+}
+
+function prevSlide(id) {
+    // Sama loogika, aga liigume ühe võrra tagasi
     const carousel = document.getElementById(id);
     const slides = carousel.querySelectorAll('.carousel-slide');
     let index = [...slides].findIndex(s => s.classList.contains('active'));
     slides[index].classList.remove('active');
-    slides[(index + 1) % slides.length].classList.add('active');
+    // (index - 1 + slides.length) tagab, et miinuse korral läheme viimase slaidi juurde
+    slides[(index - 1 + slides.length) % slides.length].classList.add('active');
 }
 </script>
 
 <footer></footer>
+
+<!-- Rippmenüü JavaScript -->
 <script>
 function toggleDropdown() {
+    // Lisame või eemaldame klassi "show" rippmenüü sisule, et näidata/peita
     document.querySelector("#recipesDropdown .dropdown-content")
             .classList.toggle("show");
 }
 
-// закрываем меню, если пользователь кликнул вне его
+// Sulgeb rippmenüü, kui klikitakse väljapoole menüüd
 document.addEventListener("click", function(event) {
     const dropdown = document.getElementById("recipesDropdown");
+    // Kui kliki koht EI olnud dropdowni sees, siis peidame selle
     if (!dropdown.contains(event.target)) {
         dropdown.querySelector(".dropdown-content").classList.remove("show");
     }
