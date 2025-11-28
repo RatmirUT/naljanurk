@@ -2,9 +2,14 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
+    <!-- Et leht skaleeruks normaalselt telefonis ja arvutis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NäljaNurk - Õhtusöök</title>
+
+    <!-- Seos välise CSS-failiga -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google fonti laadimine (Rochester) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
@@ -12,31 +17,44 @@
 <body>
 <header>
     <div class="header-content">
+        <!-- Logo ja alampealkiri vasakul ülal -->
         <div class="logo-section">
             <div class="logo">NäljaNurk</div>
             <div class="subtitle">Tudengite retseptid, tudengite nipid.</div>
         </div>
+        <!-- Ülemine navigeerimismenüü -->
         <nav>
-               <a href="index.html">Koduleht</a>
-                <div class="dropdown" id="recipesDropdown">
-                    <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
-                    <div class="dropdown-content">
-                        <a href="hommikusook.html">Hommikusöök</a>
-                        <a href="lounasook.html">Lõunasöök</a>
-                        <a href="ohtusook.html">Õhtusöök</a>
-                        <a href="snacks.html">Snäkk</a>
-                    </div>
+            <!-- Link avalehele -->
+            <a href="index.html">Koduleht</a>
+
+            <!-- Rippmenüü "Retseptid" jaoks -->
+            <div class="dropdown" id="recipesDropdown">
+                <!-- Nupp, mis avab/sulgab rippmenüü (JS funktsiooniga toggleDropdown) -->
+                <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
+                <div class="dropdown-content">
+                    <!-- Erinevad retseptikategooriate lehed -->
+                    <a href="hommikusook.html">Hommikusöök</a>
+                    <a href="lounasook.html">Lõunasöök</a>
+                    <a href="ohtusook.html">Õhtusöök</a>
+                    <a href="snacks.html">Snäkk</a>
                 </div>
-                <a href="tips.html">Säästunipid</a>
-</nav>
+            </div>
+
+            <!-- Link säästunippide lehele -->
+            <a href="tips.html">Säästunipid</a>
+        </nav>
     </div>
 </header>
 
 <main>
+    <!-- Lehe pealkiri -->
     <h1>Õhtusöögi retseptid</h1>
 
+    <!-- 1. KARUSSELL: kiired ja odavad õhtusöögid -->
     <h2>Kiired ja odavad õhtusöögid</h2>
+    <!-- Karusselli konteiner (unikaalne id, et JS teaks, millist liigutada) -->
     <div class="carousel" id="dinnerFast">
+        <!-- Esimene slaid (nähtav, sest class="active") -->
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
@@ -50,13 +68,19 @@
                         Majonees või ketšup – 1 sl,<br>
                         Õli – 1 tl.</p>
                     <p>Hind: ~ 1 - 1,2 €</p>
-                    <p>Valmistamine: Kuumuta pannil või mikrolaineahjus kanasnitsel (4–6 minutit).Soojenda kukkel rösteris või pannil, kuni kergelt krõbe.Määri alumine pool majoneesi või ketšupiga.Lisa kanasnitsel, juust (kui kasutad), tomativiilud ja salat.Kata teise poolega ja serveeri kohe.</p>
+                    <p>Valmistamine: Kuumuta pannil või mikrolaineahjus kanasnitsel (4–6 minutit).
+                        Soojenda kukkel rösteris või pannil, kuni kergelt krõbe.
+                        Määri alumine pool majoneesi või ketšupiga.
+                        Lisa kanasnitsel, juust (kui kasutad), tomativiilud ja salat.
+                        Kata teise poolega ja serveeri kohe.</p>
                     <p>Aeg: ~ 15 minutit</p>
                 </div>
+                <!-- Pilt retseptist -->
                 <img src="images/kanaburger.png" class="slide-img" alt="Kanaburger">
             </div>
         </div>
 
+        <!-- Teine slaid -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
@@ -69,13 +93,17 @@
                         Sool ja pipar,<br>
                         Maitsetaimed (nt till või petersell).</p>
                     <p>Hind: ~ 1 €</p>
-                    <p>Valmistamine: Kuumuta potis vesi ja lisa tükeldatud kartul. Keeda 5–6 minutit.Lisa külmutatud frikadellid ja köögiviljasegu.Keeda veel 7–8 minutit, kuni kõik on pehme.Maitsesta soola ja pipraga, soovi korral lisa maitserohelist.</p>
+                    <p>Valmistamine: Kuumuta potis vesi ja lisa tükeldatud kartul. Keeda 5–6 minutit.
+                        Lisa külmutatud frikadellid ja köögiviljasegu.
+                        Keeda veel 7–8 minutit, kuni kõik on pehme.
+                        Maitsesta soola ja pipraga, soovi korral lisa maitserohelist.</p>
                     <p>Aeg: ~ 20 minutit</p>
                 </div>
                 <img src="images/" class="slide-img" alt="Lihtne frikadellisupp köögiviljadega">
             </div>
         </div>
 
+        <!-- Kolmas slaid -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
@@ -88,22 +116,29 @@
                         Õli – 1 tl,<br>
                         Sool, pipar.</p>
                     <p>Hind: ~ 0,6 - 0,8 €</p>
-                    <p>Valmistamine: Klopi munad, lisa tükeldatud köögiviljad ja juust.Lisa jäägid (nt leiva- või makaronitükid).Vala segu pannile ja küpseta 4–5 minutit, kuni hüübinud.</p>
+                    <p>Valmistamine: Klopi munad, lisa tükeldatud köögiviljad ja juust.
+                        Lisa jäägid (nt leiva- või makaronitükid).
+                        Vala segu pannile ja küpseta 4–5 minutit, kuni hüübinud.</p>
                     <p>Aeg: ~ 10 minutit</p>
                 </div>
                 <img src="images/" class="slide-img" alt="“Munapitsa” pannil">
             </div>
         </div>
 
+        <!-- Vasak nool – liigutab karusselli eelmisele slaidile -->
+        <div class="arrow arrow-left" onclick="prevSlide('dinnerFast')">&#8249;</div>
+        <!-- Parem nool – liigutab karusselli järgmisele slaidile -->
         <div class="arrow" onclick="nextSlide('dinnerFast')">&#8250;</div>
     </div>
-<h2>Tervislikud õhtusöögid</h2>
+
+    <!-- 2. KARUSSELL: tervislikud õhtusöögid -->
+    <h2>Tervislikud õhtusöögid</h2>
     <div class="carousel" id="healthyCarousel">
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
                     <h3>Kana-burrito jogurtikastmega</h3>
-                    <p>Koostisosad:
+                    <p>Koostisosad:<br>
                         Tortilla – 1–2 tk,<br>
                         Keedetud riis – 80 g,<br>
                         Kanasnitsel või kanafilee – 100 g,<br>
@@ -119,7 +154,11 @@
                         Sidrunimahl – 1 tl,<br>
                         Näpuotsaga soola.</p>
                     <p>Hind: ~ 1,7 - 2 €</p>
-                    <p>Valmistamine: Prae õlis sibul ja paprikatükid 2–3 minutit. Lisa kana, maitsesta ja küpseta, kuni kuldne.Lisa mais ja keedetud riis, sega läbi.Valmista kastme jaoks jogurt, küüslauk ja sidrunimahl — sega kokku.Pane segu tortillale, lisa kastet ja riivjuustu, keera rulli.Kuumuta pannil 1–2 minutit kummaltki poolt, kuni tortilla on krõbe ja juust sulab.</p>
+                    <p>Valmistamine: Prae õlis sibul ja paprikatükid 2–3 minutit. Lisa kana, maitsesta ja küpseta,
+                        kuni kuldne. Lisa mais ja keedetud riis, sega läbi.
+                        Valmista kastme jaoks jogurt, küüslauk ja sidrunimahl — sega kokku.
+                        Pane segu tortillale, lisa kastet ja riivjuustu, keera rulli.
+                        Kuumuta pannil 1–2 minutit kummaltki poolt, kuni tortilla on krõbe ja juust sulab.</p>
                     <p>Aeg: ~ 20 minutit.</p>
                 </div>
                 <img src="images/paank.png" class="slide-img" alt="Kana-burrito jogurtikastmega">
@@ -141,7 +180,12 @@
                         1 tl oliiviõli,<br>
                         Sool, pipar, maitsetaimed (nt basiilik, oregano).</p>
                     <p>Hind: ~ 2,5 €</p>
-                    <p>Valmistamine: Keeda makaronid vastavalt pakendi juhistele ja nõruta.Lõika kanafilee väikesteks tükkideks ja prae oliiviõlis kuldseks.Lisa sibul ja küüslauk, seejärel köögiviljad, ning kuumuta paar minutit.Sega kausis kokku Kreeka jogurt (või hapukoor), muna, pool riivitud juustust ja maitseained.Lisa kana ja makaronid vormi, vala peale kaste ning sega ühtlaselt läbi.Puista peale ülejäänud juust ja küpseta 180 °C juures 20–25 minutit, kuni pealt kuldpruun.</p>
+                    <p>Valmistamine: Keeda makaronid vastavalt pakendi juhistele ja nõruta.
+                        Lõika kanafilee väikesteks tükkideks ja prae oliiviõlis kuldseks.
+                        Lisa sibul ja küüslauk, seejärel köögiviljad, ning kuumuta paar minutit.
+                        Sega kausis kokku Kreeka jogurt (või hapukoor), muna, pool riivitud juustust ja maitseained.
+                        Lisa kana ja makaronid vormi, vala peale kaste ning sega ühtlaselt läbi.
+                        Puista peale ülejäänud juust ja küpseta 180 °C juures 20–25 minutit, kuni pealt kuldpruun.</p>
                     <p>Aeg: ~ 40 minutit.</p>
                 </div>
                 <img src="images/" class="slide-img" alt="Makaronivorm kanaga">
@@ -159,15 +203,24 @@
                         1 tl oliiviõli või võid,<br>
                         Sool, pipar, maitseroheline (nt till või petersell).</p>
                     <p>Hind: ~ 2 €</p>
-                    <p>Valmistamine: Kuumuta potis õli ja lisa hakitud sibul, prae kergelt läbi.Lisa külmutatud supiviljasegu ja kuumuta paar minutit, kuni köögiviljad sulavad.Vala peale vesi või puljong ja lase keema.Lisa Fitlap pelmeenid ja keeda 6–8 minutit, kuni need on valmis.Maitsesta soola ja pipraga ning lisa värske maitseroheline.</p>
+                    <p>Valmistamine: Kuumuta potis õli ja lisa hakitud sibul, prae kergelt läbi.
+                        Lisa külmutatud supiviljasegu ja kuumuta paar minutit, kuni köögiviljad sulavad.
+                        Vala peale vesi või puljong ja lase keema.
+                        Lisa Fitlap pelmeenid ja keeda 6–8 minutit, kuni need on valmis.
+                        Maitsesta soola ja pipraga ning lisa värske maitseroheline.</p>
                     <p>Aeg: ~ 15 minutit.</p>
                 </div>
                 <img src="images/" class="slide-img" alt="Pelmeenisupp">
             </div>
         </div>
+
+        <!-- Nooled teise karusselli jaoks -->
+        <div class="arrow arrow-left" onclick="prevSlide('healthyCarousel')">&#8249;</div>
         <div class="arrow" onclick="nextSlide('healthyCarousel')">&#8250;</div>
     </div>
-<h2>Vegan õhtusöögid</h2>
+
+    <!-- 3. KARUSSELL: vegan õhtusöögid -->
+    <h2>Vegan õhtusöögid</h2>
     <div class="carousel" id="veganCarousel">
         <div class="carousel-slide active">
             <div class="slide-content">
@@ -183,7 +236,11 @@
                         Sool ja pipar maitse järgi,<br>
                         Värskeid köögivilju meelepäraselt (nt kirsstomatid, spinat).</p>
                     <p>Hind: 1,5 - 2,2 €</p>
-                    <p>Valmistamine:Keeda pasta vastavalt pakendi juhistele soolaga maitsestatud vees.Kui pasta keeb, valmista pesto: blenderis purusta basiilik, seemned, küüslauk, sidrunimahl, oliiviõli, sool ja pipar kuni ühtlaseks.Kurna pasta, jäta pisut keeduvett alles.Sega pasta pestoga, vajadusel lisa veidi pastakeeduvett, et kaste oleks kreemjas.Lisa köögiviljad ja serveeri.</p>
+                    <p>Valmistamine: Keeda pasta vastavalt pakendi juhistele soolaga maitsestatud vees.
+                        Kui pasta keeb, valmista pesto: blenderis purusta basiilik, seemned, küüslauk,
+                        sidrunimahl, oliiviõli, sool ja pipar kuni ühtlaseks.
+                        Kurna pasta, jäta pisut keeduvett alles. Sega pasta pestoga, vajadusel lisa veidi
+                        pastakeeduvett, et kaste oleks kreemjas. Lisa köögiviljad ja serveeri.</p>
                     <p>Aeg: ~ 15 - 20 minutit</p>
                 </div>
                 <img src="images/nuudlid.png" class="slide-img" alt="Taimne pesto pasta">
@@ -203,7 +260,10 @@
                         1 sl õli,<br>
                         Sool ja pipar.</p>
                     <p>Hind: 1,3 - 1,8 €</p>
-                    <p>Valmistamine: Leota india pähkleid 10–15 minutit.Tükelda seened, sibul ja seller.Kuumuta õli ja prae seened kergelt kuldseks.Lisa sibul, seller ja küüslauk, kuumuta paar minutit.Vala sisse puljong ja lisa leotatud pähklid. Keeda 10 minutit.Püreesta supp kreemjaks, maitsesta soola ja pipraga.</p>
+                    <p>Valmistamine: Leota india pähkleid 10–15 minutit. Tükelda seened, sibul ja seller.
+                        Kuumuta õli ja prae seened kergelt kuldseks. Lisa sibul, seller ja küüslauk,
+                        kuumuta paar minutit. Vala sisse puljong ja lisa leotatud pähklid.
+                        Keeda 10 minutit. Püreesta supp kreemjaks, maitsesta soola ja pipraga.</p>
                     <p>Aeg: ~ 20 - 25 minutit</p>
                 </div>
                 <img src="images/" class="slide-img" alt="Vegan koorene seenesupp">
@@ -221,37 +281,63 @@
                         Soya kaste – 1 tl,<br>
                         Pipar ja küüslaugupulber – maitse järgi.</p>
                     <p>Hind: 0,8 - 1 €</p>
-                    <p>Valmistamine: Keeda nuudlid vastavalt pakendile (umbes 3 minutit).Samal ajal kuumuta pannil õli, lisa tükeldatud tofu ja prae 2–3 minutit, kuni kergelt kuldne.Lisa külmutatud köögiviljad ja prae veel 2 minutit.Sega kõik kokku – nuudlid, tofu ja köögiviljad. Lisa sojakaste ja maitseained.</p>
+                    <p>Valmistamine: Keeda nuudlid vastavalt pakendile (umbes 3 minutit).
+                        Samal ajal kuumuta pannil õli, lisa tükeldatud tofu ja prae 2–3 minutit,
+                        kuni kergelt kuldne. Lisa külmutatud köögiviljad ja prae veel 2 minutit.
+                        Sega kõik kokku – nuudlid, tofu ja köögiviljad. Lisa sojakaste ja maitseained.</p>
                     <p>Aeg: ~ 5 - 7 minutit</p>
                 </div>
                 <img src="images/" class="slide-img" alt="Kiired nuudlid köögiviljade ja tofuga">
             </div>
         </div>
+
+        <!-- Nooled kolmanda karusselli jaoks -->
+        <div class="arrow arrow-left" onclick="prevSlide('veganCarousel')">&#8249;</div>
         <div class="arrow" onclick="nextSlide('veganCarousel')">&#8250;</div>
     </div>
 
 </main>
 
+<!-- Karusselli liigutamise JavaScript -->
 <script>
 function nextSlide(id) {
+    // Leiame õige karusselli tema id järgi
+    const carousel = document.getElementById(id);
+    // Võtame kõik selles karussellis olevad slaidid
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    // Leiame, millisel slaidil on praegu "active" klass
+    let index = [...slides].findIndex(s => s.classList.contains('active'));
+    // Eemaldame aktiivse klassi praeguselt slaidilt
+    slides[index].classList.remove('active');
+    // Lisame aktiivse klassi järgmisele slaidile (võtame järelejäänud üle moduli abil)
+    slides[(index + 1) % slides.length].classList.add('active');
+}
+
+function prevSlide(id) {
+    // Sama loogika, aga liigume ühe slaidi võrra tagasi
     const carousel = document.getElementById(id);
     const slides = carousel.querySelectorAll('.carousel-slide');
     let index = [...slides].findIndex(s => s.classList.contains('active'));
     slides[index].classList.remove('active');
-    slides[(index + 1) % slides.length].classList.add('active');
+    // (index - 1 + slides.length) % slides.length – et ei tekiks negatiivset indeksit
+    slides[(index - 1 + slides.length) % slides.length].classList.add('active');
 }
 </script>
 
 <footer></footer>
+
+<!-- Rippmenüü (Retseptid) loogika JavaScriptis -->
 <script>
 function toggleDropdown() {
+    // Lülitab .show klassi rippmenüü sisul (näita/peida)
     document.querySelector("#recipesDropdown .dropdown-content")
             .classList.toggle("show");
 }
 
-// закрываем меню, если пользователь кликнул вне его
+// Sulgeb rippmenüü, kui klikid kuskil mujal lehel
 document.addEventListener("click", function(event) {
     const dropdown = document.getElementById("recipesDropdown");
+    // Kui klikk ei olnud dropdowni sees, peidame selle
     if (!dropdown.contains(event.target)) {
         dropdown.querySelector(".dropdown-content").classList.remove("show");
     }
