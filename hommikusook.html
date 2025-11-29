@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NäljaNurk - Hommikusöök</title>
 
-    <!-- Seos välise CSS failiga -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Seos CSS-failidega -->
+      <link rel="stylesheet" href="global.css">
+      <link rel="stylesheet" href="recipes.css">
 
     <!-- Google fonti laadimiseks vajalikud read -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,10 +33,10 @@
                     <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
                     <div class="dropdown-content">
                         <!-- Erinevad retseptide lehed -->
-                        <a href="hommikusook.html">Hommikusöök</a>
-                        <a href="lounasook.html">Lõunasöök</a>
-                        <a href="ohtusook.html">Õhtusöök</a>
-                        <a href="snacks.html">Snäkk</a>
+                        <a href="hommikusook.html">Hommikusöögid</a>
+                        <a href="lounasook.html">Lõunasöögid</a>
+                        <a href="ohtusook.html">Õhtusöögid</a>
+                        <a href="snacks.html">Snäkid</a>
                     </div>
                 </div>
 
@@ -50,218 +51,348 @@
     <h1>Hommikusöögi retseptid</h1>
 
     <!-- ESIMENE KARUSSELL: "Kiired ja odavad hommikusöögid" -->
-    <h2>Kiired ja odavad hommikusöögid</h2>
+    <h2>Kiired ja odavad</h2>
 
-    <!-- Karuselli konteiner, millel on unikaalne id -->
     <div class="carousel" id="breakfastCheap">
-        <!-- Iga .carousel-slide on üks "kaart" karussellis -->
-        <!-- Esimene slaid on aktiivne (nähtav), seetõttu class="active" -->
-        <div class="carousel-slide active">
-            <div class="slide-content">
-                <div>
-                    <h3>Kaerahelbepuder banaani või moosiga</h3>
-                    <p>Koostisosad:<br> 
-                        Kaerahelbed – 50 g,<br> 
-                        Vesi või piim – 200 ml,<br> 
-                        Näputäis soola,<br> 
-                        Banaan – 1 tk.</p>
-                    <p>Hind: ~ 0,6 - 0,9 €</p>
-                    <p>Valmistamine: Keeda kaerahelbed vees või piimas 5–7 minutit, lisa sool. Lõika banaan viiludeks ja sega sisse.</p>
-                    <p>Aeg: ~ 10 minutit</p>
-                </div>
-                <!-- Pildi silt, src viitab pildifailile -->
-                <img src="images/ban.png" class="slide-img" alt="Kaerahelbepuder">
+
+<!-- 1. Kaerahelbepuder -->
+<div class="carousel-slide active">
+    <div class="slide-content">
+        <div>
+
+            <h3>Kaerahelbepuder banaani või moosiga</h3>
+
+            <p class="recipe-section-title">Koostisosad:</p>
+            <ul>
+                <li>Kaerahelbed – 50 g</li>
+                <li>Vesi või piim – 200 ml</li>
+                <li>Näputäis soola</li>
+                <li>Banaan – 1 tk</li>
+            </ul>
+
+            <p class="recipe-section-title">Valmistamine:</p>
+            <p>
+                Keeda kaerahelbed vees või piimas 5–7 minutit, lisa sool.
+                Lõika banaan viiludeks ja sega sisse.
+            </p>
+
+            <div class="recipe-meta">
+                <span class="recipe-meta-item">Hind: ~ 0,6–0,9 €</span>
+                <span class="recipe-meta-item">Aeg: ~ 10 minutit</span>
             </div>
+
         </div>
 
-        <div class="carousel-slide">
-            <div class="slide-content">
-                <div>
-                    <h3>Kuumad juustu-singivõileivad</h3>
-                    <p>Koostisosad:<br>
-                        Leib või sai – 4 viilu,<br>
-                        Sink – 2–4 viilu,<br>
-                        Juust – 2 viilu,<br>
-                        Tomat – 1 tk,<br>
-                        Või / toorjust– 1 tl.</p>
-                    <p>Hind: ~ 1 €</p>
-                    <p>Valmistamine: Määri leivaviilud kergelt võiga. Aseta peale sink, juust ja tomativiil. 
-                       Pane teine leivaviil peale (võid ka teha avatud versiooni). 
-                       Küpseta pannil või kuumuta mikrolaineahjus, kuni juust sulab ja leib muutub kuldseks (pannil umbes 3–4 minutit, mikrolaineahjus 1–2 minutit).</p>
-                    <p>Aeg: ~ 10 minutit</p>
-                </div>
-                <img src="images/Kuumad juustu-singivõileivad.png" class="slide-img" alt="Röstsai muna ja juustuga">
+        <img src="images_recipes/hommikusook/Kaerahelbepuder.jpg" class="slide-img" alt="Kaerahelbepuder">
+    </div>
+</div>
+
+<!-- 1. Kuumad juustu-singivõileivad -->
+<div class="carousel-slide">
+    <div class="slide-content">
+        <div>
+
+            <h3>Kuumad juustu-singivõileivad</h3>
+
+            <p class="recipe-section-title">Koostisosad:</p>
+            <ul>
+                <li>Leib või sai – 4 viilu</li>
+                <li>Sink – 2–4 viilu</li>
+                <li>Juust – 2 viilu</li>
+                <li>Tomat – 1 tk</li>
+                <li>Või / toorjuust – 1 tl</li>
+            </ul>
+
+            <p class="recipe-section-title">Valmistamine:</p>
+            <p>
+                Määri leivaviilud kergelt võiga. Aseta peale sink, juust ja tomativiil.
+                Pane teine leivaviil peale või tee avatud versioon.
+                Küpseta pannil või kuumuta mikrolaineahjus, kuni juust sulab ja leib muutub kuldseks.
+            </p>
+
+            <div class="recipe-meta">
+                <span class="recipe-meta-item">Hind: ~ 1 €</span>
+                <span class="recipe-meta-item">Aeg: ~ 10 minutit</span>
             </div>
+
         </div>
 
-        <div class="carousel-slide">
-            <div class="slide-content">
-                <div>
-                    <h3>Jogurti-kausike</h3>
-                    <p>Koostisosad:<br>
-                        Maitseta või vanillijogurt – 150 g,<br>
-                        Kaerahelbed või müsli – 3 sl,<br>
-                        Õun või banaan – ½ tk,<br>
-                        Soovi korral: Natuke mett või kaneeli.</p>
-                    <p>Hind: ~ 0,6 - 0,9 €</p>
-                    <p>Valmistamine: Pane kaussi jogurt ja lisa kaerahelbed või müsli.
-                       Lõika peale õuna- või banaanitükid.
-                       Soovi korral lisa veidi mett või kaneeli. Sega või söö kihiliselt.</p>
-                    <p>Aeg: ~ 3 minutit</p>
-                </div>
-                <img src="images/Jogurti-kausike.png" class="slide-img" alt="Jogurti-kausi retsept">
+        <img src="images_recipes/hommikusook/juustu_singi_voidleib.jpg"
+             class="slide-img" alt="Kuumad juustu-singivõileivad">
+    </div>
+</div>
+
+<!-- 3. Jogurti-kausike -->
+<div class="carousel-slide">
+    <div class="slide-content">
+        <div>
+
+            <h3>Jogurti-kausike</h3>
+
+            <p class="recipe-section-title">Koostisosad:</p>
+            <ul>
+                <li>Maitseta või vanillijogurt – 150 g</li>
+                <li>Kaerahelbed või müsli – 3 sl</li>
+                <li>Õun või banaan – ½ tk</li>
+                <li>Soovi korral: natuke mett või kaneeli</li>
+            </ul>
+
+            <p class="recipe-section-title">Valmistamine:</p>
+            <p>
+                Pane kaussi jogurt ja lisa kaerahelbed või müsli.
+                Lõika peale õuna- või banaanitükid.
+                Soovi korral lisa veidi mett või kaneeli. Sega või söö kihiliselt.
+            </p>
+
+            <div class="recipe-meta">
+                <span class="recipe-meta-item">Hind: ~ 0,6–0,9 €</span>
+                <span class="recipe-meta-item">Aeg: ~ 3 minutit</span>
             </div>
+
         </div>
 
-        <!-- Vasak nool – kutsub välja prevSlide funktsiooni ja annab kaasa selle karusselli ID -->
-        <div class="arrow arrow-left" onclick="prevSlide('breakfastCheap')">&#8249;</div>
+        <img src="images_recipes/hommikusook/jogurti_kausike.jpg" class="slide-img" alt="Jogurti-kausike">
+    </div>
+</div>
 
-        <!-- Parem nool – nextSlide sama karusselli jaoks -->
-        <div class="arrow" onclick="nextSlide('breakfastCheap')">&#8250;</div>
+<!-- Nooled -->
+<div class="arrow arrow-left" onclick="prevSlide('breakfastCheap')">&#8249;</div>
+<div class="arrow" onclick="nextSlide('breakfastCheap')">&#8250;</div>
+</div>
+
+
+<!-- TEINE KARUSSELL: "Tervislikud hommikusöögid" -->
+<h2>Tervislikud</h2>
+<div class="carousel" id="breakfastHealthy">
+
+    <!-- 1. Kohupiimapannkoogid -->
+    <div class="carousel-slide active">
+        <div class="slide-content">
+            <div>
+
+                <h3>Kohupiimapannkoogid</h3>
+
+                <p class="recipe-section-title">Koostisosad:</p>
+                <ul>
+                    <li>1 banaan</li>
+                    <li>2 muna</li>
+                    <li>3 spl kaerahelbeid</li>
+                    <li>Näputäis soola ja kaneeli</li>
+                    <li>Soovi korral: 1 tl maapähklivõid või valgu pulbrit</li>
+                </ul>
+
+                <p class="recipe-section-title">Valmistamine:</p>
+                <p>
+                    Sega koostisosad, vormi väikesed pätsikesed ja prae mõlemalt poolt
+                    kuldpruuniks.
+                </p>
+
+                <div class="recipe-meta">
+                    <span class="recipe-meta-item">Hind: ~ 1.5 €</span>
+                    <span class="recipe-meta-item">Aeg: ~ 15 minutit</span>
+                </div>
+
+            </div>
+
+            <img src="images_recipes/hommikusook/kohupiimapankkkoogid.jpg" class="slide-img" alt="Kohupiimapannkoogid">
+        </div>
     </div>
 
-    <!-- TEINE KARUSSELL: "Tervislikud hommikusöögid" -->
-    <h2>Tervislikud hommikusöögid</h2>
-    <div class="carousel" id="breakfastHealthy">
-        <div class="carousel-slide active">
-            <div class="slide-content">
-                <div>
-                    <h3>Kohupiimapannkoogid</h3>
-                    <p>Koostisosad: <br>
-                        1 banaan,<br>
-                        2 muna,<br>
-                        3 spl kaerahelbeid,<br>
-                        Näputäis soola ja kaneeli,<br>
-                        Soovi korral: 1 tl maapähklivõid või valgu pulbrit</p>
-                    <p>Hind: ~ 1.5 €</p>
-                    <p>Valmistamine: Sega koostisosad, vormi väikesed pätsikesed ja prae mõlemalt poolt kuldpruuniks.</p>
-                    <p>Aeg: ~ 15 minutit</p>
-                </div>
-                <img src="images/paank.png" class="slide-img" alt="Kohupiimapannkoogid">
-            </div>
-        </div>
+    <!-- 2. Kaerabanaanipannkook -->
+    <div class="carousel-slide">
+        <div class="slide-content">
+            <div>
 
-        <div class="carousel-slide">
-            <div class="slide-content">
-                <div>
-                    <h3>Kaerabanaanipannkook</h3>
-                    <p>Koostisosad:<br>
-                        1 banaan,<br>
-                        2 muna,<br>
-                        3 spl kaerahelbeid,<br>
-                        Näputäis soola ja kaneeli,<br>
-                        Soovi korral: 1 tl maapähklivõid või valgu pulbrit.</p>
-                    <p>Hind: ~ 1.5 €</p>
-                    <p>Valmistamine: Pane kõik koostisosad blenderisse ja sega ühtlaseks.
-                       Küpseta pannil madalal kuumusel kuni kuldpruun.
-                       Serveeri marjade, kohupiima või kreeka jogurtiga.</p>
-                    <p>Aeg: ~ 10 minutit</p>
-                </div>
-                <img src="images/kaera.jpg" class="slide-img" alt="Skyr marjadega">
-            </div>
-        </div>
+                <h3>Kaerabanaanipannkook</h3>
 
-        <div class="carousel-slide">
-            <div class="slide-content">
-                <div>
-                    <h3>Öökaerahelbed proteiiniga</h3>
-                    <p>Koostisosad:<br>
-                        Kaerahelbed – 40 g,<br>
-                        Piim – 120 ml,<br>
-                        Proteiinipulber – 1 mõõdulusikas,<br>
-                        Banaan – ½ tk või 1 tl maapähklivõid,<br>
-                        Kaneel või väike kogus mett (soovi korral)</p>
-                    <p>Hind: ~ 0,75 - 0,90 €</p>
-                    <p>Valmistamine: Pane kaerahelbed, proteiinipulber ja piim purki või anumasse.
-                       Lisa banaaniviilud või maapähklivõi.
-                       Sega ühtlaseks, kata kaanega ja pane külmkappi ööseks.
-                       Hommikul sega uuesti ja soovi korral kuumuta 1 minut mikrolaineahjus.</p>
-                    <p>Aeg: ~ 1 minutit</p>
-                </div>
-                <img src="images/Öökaerahelbed proteiiniga.png" class="slide-img" alt="Omlett köögiviljadega">
-            </div>
-        </div>
+                <p class="recipe-section-title">Koostisosad:</p>
+                <ul>
+                    <li>1 banaan</li>
+                    <li>2 muna</li>
+                    <li>3 spl kaerahelbeid</li>
+                    <li>Näputäis soola ja kaneeli</li>
+                    <li>Soovi korral: 1 tl maapähklivõid või valgu pulbrit</li>
+                </ul>
 
-        <!-- Nooled teise karusselli jaoks -->
-        <div class="arrow arrow-left" onclick="prevSlide('breakfastHealthy')">&#8249;</div>
-        <div class="arrow" onclick="nextSlide('breakfastHealthy')">&#8250;</div>
+                <p class="recipe-section-title">Valmistamine:</p>
+                <p>
+                    Pane kõik koostisosad blenderisse ja sega ühtlaseks.
+                    Küpseta pannil madalal kuumusel kuni kuldpruun.
+                    Serveeri marjade, kohupiima või kreeka jogurtiga.
+                </p>
+
+                <div class="recipe-meta">
+                    <span class="recipe-meta-item">Hind: ~ 1.5 €</span>
+                    <span class="recipe-meta-item">Aeg: ~ 10 minutit</span>
+                </div>
+
+            </div>
+
+            <img src="images_recipes/hommikusook/Kaerabanaanipannkook.jpg" class="slide-img" alt="Kaerabanaanipannkook">
+        </div>
     </div>
 
-    <!-- KOLMAS KARUSSELL: "Vegan hommikusöögid" -->
-    <h2>Vegan hommikusöögid</h2>
-    <div class="carousel" id="veganCarousel">
-        <div class="carousel-slide active">
-            <div class="slide-content">
-                <div>
-                    <h3>Kaerahelbepuder kakaoga</h3>
-                    <p>Koostisosad:<br>
-                        40–50 g kaerahelbeid,<br>
-                        ~200 ml taimset piima,<br>
-                        1–2 sl kakaopulbrit,<br>
-                        Näpuotsatäis soola,<br>
-                        1 tl suhkrut või 1 tl vahtrasiirupit / agavasiirupit,<br>
-                        1 tl vegan-võid või 1 tl kookosõli (valikuline, lisab kreemisust),<br>
-                        Lisandiks: banaaniviilud, marjad või pähklid</p>
-                    <p>Hind: 0,7 - 1,2 €</p>
-                    <p>Valmistamine: Kuumuta taimne piim potis.
-                       Lisa kaerahelbed ja sool, sega.
-                       Kui segu hakkab keema, lisa kakaopulber, suhkur ja sega ühtlaseks.
-                       Keeda tasasel tulel 5–8 minutit, kuni puder pakseneb.
-                       Lõpus lisa vegan-või või kookosõli, et puder muutuks eriti kreemiseks.
-                       Serveeri banaani, marjade või muude lisanditega.</p>
-                    <p>Aeg: ~ 10 minutit</p>
-                </div>
-                <img src="images/veganhm1.png" class="slide-img" alt="Vegan nuudlid">
-            </div>
-        </div>
+    <!-- 3. Öökaerahelbed proteiiniga -->
+    <div class="carousel-slide">
+        <div class="slide-content">
+            <div>
 
-        <div class="carousel-slide">
-            <div class="slide-content">
-                <div>
-                    <h3>Röstsepik avokaadoga</h3>
-                    <p>Koostisosad:<br>
-                        2 viil sepikut (röstimiseks),<br>
-                        ½ (või 1) küps avokaado,<br>
-                        Näpuotsatäis soola,<br>
-                        Näpuotsatäis pipart,<br>
-                        1 tl sidrunimahla (soovi korral),<br>
-                        Tšillihelbed (soovi korral)</p>
-                    <p>Hind: 2 - 2,7 €</p>
-                    <p>Valmistamine: Rösti sepikuviil kuldpruuniks.
-                       Lõika või suru kahvliga avokaado lahti ja määri sepiku peale.
-                       Maitsesta soola, pipra ja sidrunimahlaga. 
-                       Soovi korral lisa ka tšillihelbeid.
-                       Serveeri kohe, kui tahad – lisandina võib kasutada tomativiile või seemneid.</p>
-                    <p>Aeg: ~ 5 minutit</p>
-                </div>
-                <img src="images/veganhm2.png" class="slide-img" alt="Vegan retsept 2">
-            </div>
-        </div>
+                <h3>Öökaerahelbed proteiiniga</h3>
 
-        <div class="carousel-slide">
-            <div class="slide-content">
-                <div>
-                    <h3>Smuuti bowl</h3>
-                    <p>Koostisosad:<br>
-                        25 g kaerahelbeid,<br>
-                        16 g kuivatatud kõrvitsaseemneid,<br>
-                        70 g banaani,<br> 
-                        40 g taimne jogurt,<br>
-                        Soovi korral: taimne piim või vesi, magustaja, marjad kaunistuseks</p>
-                    <p>Hind: 1 - 1,6 €</p>
-                    <p>Valmistamine: Loo alustuseks blenderis segu: kaerahelbed + banaan + kreemjas koostisosa + väike kogus vedelikku (nt taimne piim).
-                       Blenderda kuni ühtlaseks ja kreemjaks.
-                       Vala kaussi, puista peale kõrvitsaseemned ja soovi korral lisa marju või banaaniviile.</p>
-                    <p>Aeg: ~ 5-7 minutit</p>
-                </div>
-                <img src="images/veganhm3.png" class="slide-img" alt="Vegan retsept 3">
-            </div>
-        </div>
+                <p class="recipe-section-title">Koostisosad:</p>
+                <ul>
+                    <li>Kaerahelbed – 40 g</li>
+                    <li>Piim – 120 ml</li>
+                    <li>Proteiinipulber – 1 mõõdulusikas</li>
+                    <li>Banaan – ½ tk või 1 tl maapähklivõid</li>
+                    <li>Kaneel või väike kogus mett (soovi korral)</li>
+                </ul>
 
-        <!-- Nooled kolmanda karusselli jaoks -->
-        <div class="arrow arrow-left" onclick="prevSlide('veganCarousel')">&#8249;</div>
-        <div class="arrow" onclick="nextSlide('veganCarousel')">&#8250;</div>
+                <p class="recipe-section-title">Valmistamine:</p>
+                <p>
+                    Pane kaerahelbed, proteiinipulber ja piim purki või anumasse.
+                    Lisa banaaniviilud või maapähklivõi.
+                    Sega ühtlaseks, kata kaanega ja pane külmkappi ööseks.
+                    Hommikul sega uuesti ja soovi korral kuumuta 1 minut mikrolaineahjus.
+                </p>
+
+                <div class="recipe-meta">
+                    <span class="recipe-meta-item">Hind: ~ 0,75–0,90 €</span>
+                    <span class="recipe-meta-item">Aeg: ~ 1 minut</span>
+                </div>
+
+            </div>
+
+            <img src="images_recipes/hommikusook/Öökaerahelbed.jpg"
+                 class="slide-img" alt="Öökaerahelbed proteiiniga">
+        </div>
     </div>
+
+    <!-- Nooled -->
+    <div class="arrow arrow-left" onclick="prevSlide('breakfastHealthy')">&#8249;</div>
+    <div class="arrow" onclick="nextSlide('breakfastHealthy')">&#8250;</div>
+</div>
+
+
+<!-- KOLMAS KARUSSELL: "Vegan hommikusöögid" -->
+<h2>Vegan</h2>
+<div class="carousel" id="veganCarousel">
+
+    <!-- 1. Kaerahelbepuder kakaoga -->
+    <div class="carousel-slide active">
+        <div class="slide-content">
+            <div>
+
+                <h3>Kaerahelbepuder kakaoga</h3>
+
+                <p class="recipe-section-title">Koostisosad:</p>
+                <ul>
+                    <li>40–50 g kaerahelbeid</li>
+                    <li>~200 ml taimset piima</li>
+                    <li>1–2 sl kakaopulbrit</li>
+                    <li>Näpuotsatäis soola</li>
+                    <li>1 tl suhkrut või 1 tl vahtrasiirupit / agavasiirupit</li>
+                    <li>1 tl vegan-võid või 1 tl kookosõli (valikuline, lisab kreemisust)</li>
+                    <li>Lisandiks: banaaniviilud, marjad või pähklid</li>
+                </ul>
+
+                <p class="recipe-section-title">Valmistamine:</p>
+                <p>
+                    Kuumuta taimne piim potis.
+                    Lisa kaerahelbed ja sool, sega.
+                    Kui segu hakkab keema, lisa kakaopulber ja suhkur ning sega ühtlaseks.
+                    Keeda tasasel tulel 5–8 minutit, kuni puder pakseneb.
+                    Lõpus lisa vegan-või või kookosõli, et puder muutuks eriti kreemiseks.
+                    Serveeri banaani, marjade või muude lisanditega.
+                </p>
+
+                <div class="recipe-meta">
+                    <span class="recipe-meta-item">Hind: 0,7–1,2 €</span>
+                    <span class="recipe-meta-item">Aeg: ~ 10 minutit</span>
+                </div>
+
+            </div>
+
+            <img src="images_recipes/hommikusook/kokao_kaerapuder.jpg" class="slide-img" alt="Vegan nuudlid">
+        </div>
+    </div>
+
+    <!-- 2. Röstsepik avokaadoga -->
+    <div class="carousel-slide">
+        <div class="slide-content">
+            <div>
+
+                <h3>Röstsepik avokaadoga</h3>
+
+                <p class="recipe-section-title">Koostisosad:</p>
+                <ul>
+                    <li>2 viil sepikut (röstimiseks)</li>
+                    <li>½–1 küps avokaado</li>
+                    <li>Näpuotsatäis soола</li>
+                    <li>Näpuotsatäis pipart</li>
+                    <li>1 tl sidrunimahla (soovi korral)</li>
+                    <li>Tšillihelbed (soovi korral)</li>
+                </ul>
+
+                <p class="recipe-section-title">Valmistamine:</p>
+                <p>
+                    Rösti sepikuviil kuldpruuniks.
+                    Lõika või suru kahvliga avokaado lahti ja määri sepiku peale.
+                    Maitsesta soola, pipра ja sidrunимahlaга.
+                    Soovi korral lisa ka tšillihelbeid.
+                    Serveeri kohe – lisandina võib kasutada tomativiile või seemнеid.
+                </p>
+
+                <div class="recipe-meta">
+                    <span class="recipe-meta-item">Hind: 2–2,7 €</span>
+                    <span class="recipe-meta-item">Aeg: ~ 5 minutit</span>
+                </div>
+
+            </div>
+
+            <img src="images_recipes/hommikusook/Röstsepik avokaadoga.jpg" class="slide-img" alt="Vegan retsept 2">
+        </div>
+    </div>
+
+    <!-- 3. Smuuti bowl -->
+    <div class="carousel-slide">
+        <div class="slide-content">
+            <div>
+
+                <h3>Smuuti bowl</h3>
+
+                <p class="recipe-section-title">Koostisosad:</p>
+                <ul>
+                    <li>25 g kaerahelbeid</li>
+                    <li>16 g kuivatatud kõrvitsaseemneid</li>
+                    <li>70 g banaани</li>
+                    <li>40 g taimset jogurtit</li>
+                    <li>Soovi korral: taimne piim või vesi, magustaja, marjad kaunistuseks</li>
+                </ul>
+
+                <p class="recipe-section-title">Valmistamine:</p>
+                <p>
+                    Blenderda kaerahelbed, banaan, taimne jogurt ja väike kogus vedelikku
+                    (nt taimne piim) ühtlaseks ja kreemjaks.
+                    Vala segu kaussi, puista peale kõrvitsaseemned ja soovi korral lisa marju
+                    või banaaniviile.
+                </p>
+
+                <div class="recipe-meta">
+                    <span class="recipe-meta-item">Hind: 1–1,6 €</span>
+                    <span class="recipe-meta-item">Aeg: ~ 5–7 minutit</span>
+                </div>
+
+            </div>
+
+            <img src="images_recipes/hommikusook/Smuuti bowl.jpg" class="slide-img" alt="Vegan retsept 3">
+        </div>
+    </div>
+
+    <!-- Nooled -->
+    <div class="arrow arrow-left" onclick="prevSlide('veganCarousel')">&#8249;</div>
+    <div class="arrow" onclick="nextSlide('veganCarousel')">&#8250;</div>
+</div>
 </main>
 
 <!-- Karusselli liigutamise JavaScript -->

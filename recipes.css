@@ -1,0 +1,159 @@
+/* ----- KARUSSELLI KONTEINER ----- */
+
+.carousel {
+    background-color: #15BFD2;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    position: relative;
+}
+
+/* Iga slaid (ainult .active on nähtav) */
+.carousel-slide {
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+/* ----- RETSEPTIKAART (TEKST + PILT) ----- */
+
+.slide-content {
+    display: flex;
+    align-items: center;     
+    gap: 24px;
+
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 26px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    max-width: 900px;
+    margin: 0 auto 32px;
+}
+
+/* Tekstiplokk vasakul */
+.slide-content > div:first-child {
+    flex: 1;
+}
+
+/* ----- TEKSTI STIILID ----- */
+
+/* Retsepti pealkiri */
+.carousel-slide h3 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    font-family: "Rochester", cursive;
+    font-style: italic;
+    font-weight: 400;
+    color: #15BFD2;
+}
+
+/* Üldine lõigustiil */
+.carousel-slide p {
+    margin: 6px 0;
+    line-height: 1.6;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+}
+
+/* Koostisosade list */
+.carousel-slide ul {
+    margin: 8px 0 12px 20px;
+    padding: 0;
+}
+
+.carousel-slide li {
+    margin-bottom: 4px;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+
+/* Väikesed alapealkirjad "Koostisosad:" ja "Valmistamine:" */
+.recipe-section-title {
+    font-weight: 700;
+    font-size: 17px;
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+/* ----- PILT RETSEPTIKAARDIL ----- */
+
+.slide-img {
+    width: 45%;             
+    max-width: 320px;       
+
+    aspect-ratio: 3 / 4;    
+    object-fit: cover;       
+    object-position: center;
+
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+
+/* ----- HIND + AEG "PILLIDENA" ----- */
+
+.recipe-meta {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px;
+}
+
+.recipe-meta-item {
+    background-color: #E5F8FA;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ----- NOOLED KARUSSELLI JAOKS ----- */
+
+.arrow {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    color: #15BFD2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.arrow:hover {
+    background-color: #e6faff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Vasak nool */
+.arrow-left {
+    left: -35px;
+    right: auto;
+}
+
+/* ----- VASTUTUSVÕIMELINE KUJUNDUS (telefonid) ----- */
+
+@media (max-width: 700px) {
+    .slide-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .slide-img {
+        width: 100%;
+        max-width: none;
+        margin-top: 12px;
+    }
+}

@@ -1,0 +1,19 @@
+/* ----- TIPS ERIVORMINDUS ----- */
+.tips ol {
+    list-style-type: disc; 
+    padding-left: 28px;    
+}
+
+.tips ol li {
+    margin-bottom: 8px;    
+}
+
+/* Foto (lai bänner) */
+.tip-photo {
+  width: 100%;
+  aspect-ratio: 1400 / 350;
+  object-fit: cover;
+  object-position: 50% 35%;
+  border-radius: 10px;
+  display: block;
+}

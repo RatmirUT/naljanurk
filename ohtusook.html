@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NäljaNurk - Õhtusöök</title>
 
-    <!-- Seos välise CSS-failiga -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Seos CSS-failidega -->
+      <link rel="stylesheet" href="global.css">
+      <link rel="stylesheet" href="recipes.css">
 
     <!-- Google fonti laadimine (Rochester) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,11 +33,11 @@
                 <!-- Nupp, mis avab/sulgab rippmenüü (JS funktsiooniga toggleDropdown) -->
                 <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
                 <div class="dropdown-content">
-                    <!-- Erinevad retseptikategooriate lehed -->
-                    <a href="hommikusook.html">Hommikusöök</a>
-                    <a href="lounasook.html">Lõunasöök</a>
-                    <a href="ohtusook.html">Õhtusöök</a>
-                    <a href="snacks.html">Snäkk</a>
+                    <!-- Erinevad retseptide lehed -->
+                    <a href="hommikusook.html">Hommikusöögid</a>
+                    <a href="lounasook.html">Lõunasöögid</a>
+                    <a href="ohtusook.html">Õhtusöögid</a>
+                    <a href="snacks.html">Snäkid</a>
                 </div>
             </div>
 
@@ -51,166 +52,243 @@
     <h1>Õhtusöögi retseptid</h1>
 
     <!-- 1. KARUSSELL: kiired ja odavad õhtusöögid -->
-    <h2>Kiired ja odavad õhtusöögid</h2>
-    <!-- Karusselli konteiner (unikaalne id, et JS teaks, millist liigutada) -->
+    <h2>Kiired ja odavad</h2>
     <div class="carousel" id="dinnerFast">
-        <!-- Esimene slaid (nähtav, sest class="active") -->
+
+        <!-- 1. Kana-burger -->
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
                     <h3>Kana-burger</h3>
-                    <p>Koostisosad:<br>
-                        Odav kukkel või tavaline sai – 1 tk,<br>
-                        Kanasnitsel – 1 tk (~100 g),<br>
-                        Juust – 1 viil (~20 g) (valikuline),<br>
-                        Tomat või kurk – paar viilu,<br>
-                        Lehtsalat (soovi korral),<br>
-                        Majonees või ketšup – 1 sl,<br>
-                        Õli – 1 tl.</p>
-                    <p>Hind: ~ 1 - 1,2 €</p>
-                    <p>Valmistamine: Kuumuta pannil või mikrolaineahjus kanasnitsel (4–6 minutit).
-                        Soojenda kukkel rösteris või pannil, kuni kergelt krõbe.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>Odav kukkel või tavaline sai – 1 tk</li>
+                        <li>Kanasnitsel – 1 tk (~100 g)</li>
+                        <li>Juust – 1 viil (~20 g, valikuline)</li>
+                        <li>Tomat või kurk – paar viilu</li>
+                        <li>Lehtsalat (soovi korral)</li>
+                        <li>Majonees või ketšup – 1 sl</li>
+                        <li>Õli – 1 tl</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Kuumuta pannil või mikrolaineahjus kanasnitsel (4–6 minutit).
+                        Soojenda kukkel rösteris või pannil, kuni see on kergelt krõbe.
                         Määri alumine pool majoneesi või ketšupiga.
                         Lisa kanasnitsel, juust (kui kasutad), tomativiilud ja salat.
-                        Kata teise poolega ja serveeri kohe.</p>
-                    <p>Aeg: ~ 15 minutit</p>
+                        Kata teise poolega ja serveeri kohe.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 1–1,2 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 15 minutit</span>
+                    </div>
                 </div>
-                <!-- Pilt retseptist -->
-                <img src="images/kanaburger.png" class="slide-img" alt="Kanaburger">
+
+                <img src="images_recipes/ohtusook/Kana-burger.jpg" class="slide-img" alt="Kanaburger">
             </div>
         </div>
 
-        <!-- Teine slaid -->
+        <!-- 2. Lihtne frikadellisupp köögiviljadega -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>Lihtne frikadellisupp köögiviljadega</h3>
-                    <p>Koostisosad:<br>
-                        Vesi - 1 l,<br>
-                        Külmutatud frikadellid – 150 g,<br>
-                        Külmutatud köögiviljasegu – 150 g,<br>
-                        Kartul – 1 tk (~100 g),<br>
-                        Sool ja pipar,<br>
-                        Maitsetaimed (nt till või petersell).</p>
-                    <p>Hind: ~ 1 €</p>
-                    <p>Valmistamine: Kuumuta potis vesi ja lisa tükeldatud kartul. Keeda 5–6 minutit.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>Vesi – 1 l</li>
+                        <li>Külmutatud frikadellid – 150 g</li>
+                        <li>Külmutatud köögiviljasegu – 150 g</li>
+                        <li>Kartul – 1 tk (~100 g)</li>
+                        <li>Sool ja pipar</li>
+                        <li>Maitsetaimed (nt till või petersell)</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Kuumuta potis vesi ja lisa tükeldatud kartul. Keeda 5–6 minutit.
                         Lisa külmutatud frikadellid ja köögiviljasegu.
                         Keeda veel 7–8 minutit, kuni kõik on pehme.
-                        Maitsesta soola ja pipraga, soovi korral lisa maitserohelist.</p>
-                    <p>Aeg: ~ 20 minutit</p>
+                        Maitsesta soola ja pipraga ning lisa maitserohelist.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 1 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 20 minutit</span>
+                    </div>
                 </div>
-                <img src="images/" class="slide-img" alt="Lihtne frikadellisupp köögiviljadega">
+
+                <img src="images_recipes/ohtusook/Frikadellisupp.jpg" class="slide-img" alt="Lihtne frikadellisupp köögiviljadega">
             </div>
         </div>
 
-        <!-- Kolmas slaid -->
+        <!-- 3. “Munapitsa” pannil -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>“Munapitsa” pannil</h3>
-                    <p>Koostisosad:<br>
-                        Munad – 2 tk,<br>
-                        Juust – 30 g,<br>
-                        Tomat või paprika – ½ tk,<br>
-                        Leib või makaronijäägid – väike kogus,<br>
-                        Õli – 1 tl,<br>
-                        Sool, pipar.</p>
-                    <p>Hind: ~ 0,6 - 0,8 €</p>
-                    <p>Valmistamine: Klopi munad, lisa tükeldatud köögiviljad ja juust.
-                        Lisa jäägid (nt leiva- või makaronitükid).
-                        Vala segu pannile ja küpseta 4–5 minutit, kuni hüübinud.</p>
-                    <p>Aeg: ~ 10 minutit</p>
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>Munad – 2 tk</li>
+                        <li>Juust – 30 g</li>
+                        <li>Tomat või paprika – ½ tk</li>
+                        <li>Leib või makaronijäägid – väike kogus</li>
+                        <li>Õli – 1 tl</li>
+                        <li>Sool ja pipar</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Klopi munad, lisa tükeldatud köögiviljad ja juust.
+                        Lisa leiva- või makaronitükid.
+                        Vala segu pannile ja küpseta 4–5 minutit, kuni muna on hüübinud.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 0,6–0,8 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 10 minutit</span>
+                    </div>
                 </div>
-                <img src="images/" class="slide-img" alt="“Munapitsa” pannil">
+
+                <img src="images_recipes/ohtusook/Munapitsa.jpg" class="slide-img" alt="“Munapitsa” pannil">
             </div>
         </div>
 
-        <!-- Vasak nool – liigutab karusselli eelmisele slaidile -->
+        <!-- Nooled -->
         <div class="arrow arrow-left" onclick="prevSlide('dinnerFast')">&#8249;</div>
-        <!-- Parem nool – liigutab karusselli järgmisele slaidile -->
         <div class="arrow" onclick="nextSlide('dinnerFast')">&#8250;</div>
     </div>
 
+
     <!-- 2. KARUSSELL: tervislikud õhtusöögid -->
-    <h2>Tervislikud õhtusöögid</h2>
+    <h2>Tervislikud</h2>
     <div class="carousel" id="healthyCarousel">
+
+        <!-- 1. Kana-burrito jogurtikastmega -->
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
                     <h3>Kana-burrito jogurtikastmega</h3>
-                    <p>Koostisosad:<br>
-                        Tortilla – 1–2 tk,<br>
-                        Keedetud riis – 80 g,<br>
-                        Kanasnitsel või kanafilee – 100 g,<br>
-                        Sibul – ½ tk,<br>
-                        Paprika – ½ tk,<br>
-                        Mais – 2 sl,<br>
-                        Juust – 30 g (riivitud),<br>
-                        Õli – 1 tl,<br>
-                        Sool, pipar, paprika- või taco-maitseaine,<br>
-                        Jogurtikaste:<br>
-                        Maitseta jogurt – 2 sl,<br>
-                        Küüslauk – ½ küüs (purustatud),<br>
-                        Sidrunimahl – 1 tl,<br>
-                        Näpuotsaga soola.</p>
-                    <p>Hind: ~ 1,7 - 2 €</p>
-                    <p>Valmistamine: Prae õlis sibul ja paprikatükid 2–3 minutit. Lisa kana, maitsesta ja küpseta,
-                        kuni kuldne. Lisa mais ja keedetud riis, sega läbi.
-                        Valmista kastme jaoks jogurt, küüslauk ja sidrunimahl — sega kokku.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>Tortilla – 1–2 tk</li>
+                        <li>Keedetud riis – 80 g</li>
+                        <li>Kanasnitsel või kanafilee – 100 g</li>
+                        <li>Sibul – ½ tk</li>
+                        <li>Paprika – ½ tk</li>
+                        <li>Mais – 2 sl</li>
+                        <li>Juust – 30 g (riivitud)</li>
+                        <li>Õli – 1 tl</li>
+                        <li>Sool, pipar, paprika- või taco-maitseaine</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Jogurtikaste:</strong></p>
+                    <ul>
+                        <li>Maitseta jogurt – 2 sl</li>
+                        <li>Küüslauk – ½ küüs (purustatud)</li>
+                        <li>Sidrunimahl – 1 tl</li>
+                        <li>Näpuotsaga soola</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Prae õlis sibul ja paprikatükid 2–3 minutit. Lisa kana, maitsesta ja küpseta,
+                        kuni see on kuldne. Lisa mais ja keedetud riis, sega läbi.
+                        Sega kokku jogurt, küüslauk ja sidrunimahl kastme jaoks.
                         Pane segu tortillale, lisa kastet ja riivjuustu, keera rulli.
-                        Kuumuta pannil 1–2 minutit kummaltki poolt, kuni tortilla on krõbe ja juust sulab.</p>
-                    <p>Aeg: ~ 20 minutit.</p>
+                        Kuumuta pannil 1–2 minutit kummaltki poolt, kuni tortilla on krõbe
+                        ja juust sulab.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 1,7–2 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 20 minutit</span>
+                    </div>
                 </div>
-                <img src="images/paank.png" class="slide-img" alt="Kana-burrito jogurtikastmega">
+
+                <img src="images_recipes/ohtusook/Kana-burrito.jpg" class="slide-img" alt="Kana-burrito jogurtikastmega">
             </div>
         </div>
+
+        <!-- 2. Makaronivorm kanaga -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>Makaronivorm kanaga</h3>
-                    <p>Koostisosad:<br>
-                        150 g kanafileed,<br>
-                        120 g täisteramakaronе,<br> 
-                        ½ sibulat,<br>
-                        1 küüslauguküüs,<br>
-                        100 g külmutatud köögiviljasegu (nt mais, herned, paprika),<br>
-                        100 ml maitsestamata Kreeka jogurtit või hapukoort,<br>
-                        1 muna,<br> 
-                        30 g riivitud juustu,<br>
-                        1 tl oliiviõli,<br>
-                        Sool, pipar, maitsetaimed (nt basiilik, oregano).</p>
-                    <p>Hind: ~ 2,5 €</p>
-                    <p>Valmistamine: Keeda makaronid vastavalt pakendi juhistele ja nõruta.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>150 g kanafileed</li>
+                        <li>120 g täisteramakaronid</li>
+                        <li>½ sibulat</li>
+                        <li>1 küüslauguküüs</li>
+                        <li>100 g külmutatud köögiviljasegu (nt mais, herned, paprika)</li>
+                        <li>100 ml maitsestamata Kreeka jogurtit või hapukoort</li>
+                        <li>1 muna</li>
+                        <li>30 g riivitud juustu</li>
+                        <li>1 tl oliiviõli</li>
+                        <li>Sool, pipar, maitsetaimed (nt basiilik, oregano)</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Keeda makaronid vastavalt pakendi juhistele ja nõruta.
                         Lõika kanafilee väikesteks tükkideks ja prae oliiviõlis kuldseks.
-                        Lisa sibul ja küüslauk, seejärel köögiviljad, ning kuumuta paar minutit.
-                        Sega kausis kokku Kreeka jogurt (või hapukoor), muna, pool riivitud juustust ja maitseained.
-                        Lisa kana ja makaronid vormi, vala peale kaste ning sega ühtlaselt läbi.
-                        Puista peale ülejäänud juust ja küpseta 180 °C juures 20–25 minutit, kuni pealt kuldpruun.</p>
-                    <p>Aeg: ~ 40 minutit.</p>
+                        Lisa sibul ja küüslauk, seejärel köögiviljad ning kuumuta paar minutit.
+                        Sega kausis kokku Kreeka jogurt (või hapukoor), muna, pool riivitud juustust
+                        ja maitseained. Lisa kana ja makaronid vormi, vala peale kaste ning sega
+                        ühtlaselt läbi. Puista peale ülejäänud juust ja küpseta 180 °C juures
+                        20–25 minutit, kuni pealt kuldpruun.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 2,5 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 40 minutit</span>
+                    </div>
                 </div>
-                <img src="images/" class="slide-img" alt="Makaronivorm kanaga">
+
+                <img src="images_recipes/ohtusook/Makaronivorm_kanaga.jpg" class="slide-img" alt="Makaronivorm kanaga">
             </div>
         </div>
+
+        <!-- 3. Pelmeenisupp -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>Pelmeenisupp</h3>
-                    <p>Koostisosad:<br>
-                        200 g Fitlap pelmeene (nt kana või veiselihaga),<br> 
-                        1 l vett,<br>
-                        200 g külmutatud supiviljasegu,<br>
-                        ½ sibulat (soovi korral),<br>
-                        1 tl oliiviõli või võid,<br>
-                        Sool, pipar, maitseroheline (nt till või petersell).</p>
-                    <p>Hind: ~ 2 €</p>
-                    <p>Valmistamine: Kuumuta potis õli ja lisa hakitud sibul, prae kergelt läbi.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>200 g Fitlap pelmeene (nt kana või veiselihaga)</li>
+                        <li>1 l vett</li>
+                        <li>200 g külmutatud supiviljasegu</li>
+                        <li>½ sibulat (soovi korral)</li>
+                        <li>1 tl oliiviõli või võid</li>
+                        <li>Sool, pipar</li>
+                        <li>Maitseroheline (nt till või petersell)</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Kuumuta potis õli ja lisa hakitud sibul, prae kergelt läbi.
                         Lisa külmutatud supiviljasegu ja kuumuta paar minutit, kuni köögiviljad sulavad.
                         Vala peale vesi või puljong ja lase keema.
                         Lisa Fitlap pelmeenid ja keeda 6–8 minutit, kuni need on valmis.
-                        Maitsesta soola ja pipraga ning lisa värske maitseroheline.</p>
-                    <p>Aeg: ~ 15 minutit.</p>
+                        Maitsesta soola ja pipraga ning lisa värske maitseroheline.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 2 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 15 minutit</span>
+                    </div>
                 </div>
-                <img src="images/" class="slide-img" alt="Pelmeenisupp">
+
+                <img src="images_recipes/ohtusook/Pelmeenisupp.webp" class="slide-img" alt="Pelmeenisupp">
             </div>
         </div>
 
@@ -219,75 +297,116 @@
         <div class="arrow" onclick="nextSlide('healthyCarousel')">&#8250;</div>
     </div>
 
+
     <!-- 3. KARUSSELL: vegan õhtusöögid -->
-    <h2>Vegan õhtusöögid</h2>
+    <h2>Vegan</h2>
     <div class="carousel" id="veganCarousel">
+
+        <!-- 1. Taimne pesto pasta -->
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
                     <h3>Taimne pesto pasta</h3>
-                    <p>Koostisosad:<br>
-                        160 g pasta (nt täistera või kaunviljapasta),<br>
-                        40 g värsket basiilikut,<br>
-                        30 g päevalilleseemneid või männiseemneid (või segu),<br>
-                        1 küüslauguküüs,<br>
-                        1 sidruni mahl,<br>                        
-                        2 - 3 sl oliiviõli,<br>
-                        Sool ja pipar maitse järgi,<br>
-                        Värskeid köögivilju meelepäraselt (nt kirsstomatid, spinat).</p>
-                    <p>Hind: 1,5 - 2,2 €</p>
-                    <p>Valmistamine: Keeda pasta vastavalt pakendi juhistele soolaga maitsestatud vees.
-                        Kui pasta keeb, valmista pesto: blenderis purusta basiilik, seemned, küüslauk,
-                        sidrunimahl, oliiviõli, sool ja pipar kuni ühtlaseks.
-                        Kurna pasta, jäta pisut keeduvett alles. Sega pasta pestoga, vajadusel lisa veidi
-                        pastakeeduvett, et kaste oleks kreemjas. Lisa köögiviljad ja serveeri.</p>
-                    <p>Aeg: ~ 15 - 20 minutit</p>
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>160 g pastat (nt täistera- või kaunviljapasta)</li>
+                        <li>40 g värsket basiilikut</li>
+                        <li>30 g päevalilleseemneid või männiseemneid (või segu)</li>
+                        <li>1 küüslauguküüs</li>
+                        <li>1 sidruni mahl</li>
+                        <li>2–3 sl oliiviõli</li>
+                        <li>Sool ja pipar maitse järgi</li>
+                        <li>Värskeid köögivilju meelepäraselt (nt kirsstomatid, spinat)</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Keeda pasta vastavalt pakendi juhistele soolaga maitsestatud vees.
+                        Kui pasta keeb, valmista pesto: blenderis purusta basiilik, seemned,
+                        küüslauk, sidrunimahl, oliiviõli, sool ja pipar kuni ühtlaseks.
+                        Kurna pasta, jäta pisut keeduvett alles. Sega pasta pestoga, vajadusel lisa
+                        veidi pastakeeduvett, et kaste oleks kreemjas. Lisa köögiviljad ja serveeri.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: 1,5–2,2 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 15–20 minutit</span>
+                    </div>
                 </div>
-                <img src="images/nuudlid.png" class="slide-img" alt="Taimne pesto pasta">
+
+                <img src="images_recipes/ohtusook/pesto_pasta.jpg" class="slide-img" alt="Taimne pesto pasta">
             </div>
         </div>
+
+        <!-- 2. Vegan koorene seenesupp -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>Vegan koorene seenesupp</h3>
-                    <p>Koostisosad:<br>
-                        250 g värskeid seeni,<br>
-                        1 väike sibul,<br>
-                        1 sellerivars,<br>
-                        1 küüslauguküüs (soovi korral),<br>
-                        300 ml köögiviljapuljongit,<br>
-                        40 g india pähkleid (eelnevalt leotatud),<br>
-                        1 sl õli,<br>
-                        Sool ja pipar.</p>
-                    <p>Hind: 1,3 - 1,8 €</p>
-                    <p>Valmistamine: Leota india pähkleid 10–15 minutit. Tükelda seened, sibul ja seller.
-                        Kuumuta õli ja prae seened kergelt kuldseks. Lisa sibul, seller ja küüslauk,
-                        kuumuta paar minutit. Vala sisse puljong ja lisa leotatud pähklid.
-                        Keeda 10 minutit. Püreesta supp kreemjaks, maitsesta soola ja pipraga.</p>
-                    <p>Aeg: ~ 20 - 25 minutit</p>
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>250 g värskeid seeni</li>
+                        <li>1 väike sibul</li>
+                        <li>1 sellerivars</li>
+                        <li>1 küüslauguküüs (soovi korral)</li>
+                        <li>300 ml köögiviljapuljongit</li>
+                        <li>40 g india pähkleid (eelnevalt leotatud)</li>
+                        <li>1 sl õli</li>
+                        <li>Sool ja pipar</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Leota india pähkleid 10–15 minutit. Tükelda seened, sibul ja seller.
+                        Kuumuta õli ja prae seened kergelt kuldseks.
+                        Lisa sibul, seller ja küüslauk ning kuumuta paar minutit.
+                        Vala sisse puljong ja lisa leotatud pähklid.
+                        Keeda 10 minutit. Püreesta supp kreemjaks, maitsesta soola ja pipraga.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: 1,3–1,8 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 20–25 minutit</span>
+                    </div>
                 </div>
-                <img src="images/" class="slide-img" alt="Vegan koorene seenesupp">
+
+                <img src="images_recipes/ohtusook/koorene_seenesupp.jpg" class="slide-img" alt="Vegan koorene seenesupp">
             </div>
         </div>
+
+        <!-- 3. Kiired nuudlid köögiviljade ja tofuga -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>Kiired nuudlid köögiviljade ja tofuga</h3>
-                    <p>Koostisosad:<br>
-                        Vegan kiirnuudlid ~ 70 g,<br>
-                        Külmutatud köögiviljasegu – 100 g,<br>
-                        Tofu – 80 g,<br>
-                        Õli – 1 tl,<br>
-                        Soya kaste – 1 tl,<br>
-                        Pipar ja küüslaugupulber – maitse järgi.</p>
-                    <p>Hind: 0,8 - 1 €</p>
-                    <p>Valmistamine: Keeda nuudlid vastavalt pakendile (umbes 3 minutit).
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>Vegan kiirnuudlid – ~70 g</li>
+                        <li>Külmutatud köögiviljasegu – 100 g</li>
+                        <li>Tofu – 80 g</li>
+                        <li>Õli – 1 tl</li>
+                        <li>Soya kaste – 1 tl</li>
+                        <li>Pipar ja küüslaugupulber – maitse järgi</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Keeda nuudlid vastavalt pakendile (umbes 3 minutit).
                         Samal ajal kuumuta pannil õli, lisa tükeldatud tofu ja prae 2–3 minutit,
-                        kuni kergelt kuldne. Lisa külmutatud köögiviljad ja prae veel 2 minutit.
-                        Sega kõik kokku – nuudlid, tofu ja köögiviljad. Lisa sojakaste ja maitseained.</p>
-                    <p>Aeg: ~ 5 - 7 minutit</p>
+                        kuni see on kergelt kuldne. Lisa külmutatud köögiviljad ja prae veel 2 minutit.
+                        Sega kõik kokku – nuudlid, tofu ja köögiviljad. Lisa sojakaste ja maitseained.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: 0,8–1 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 5–7 minutit</span>
+                    </div>
                 </div>
-                <img src="images/" class="slide-img" alt="Kiired nuudlid köögiviljade ja tofuga">
+
+                <img src="images_recipes/ohtusook/nuudlid_tofuga.jpg" class="slide-img" alt="Kiired nuudlid köögiviljade ja tofuga">
             </div>
         </div>
 
