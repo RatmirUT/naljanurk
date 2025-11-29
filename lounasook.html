@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NäljaNurk - Lõunasöök</title>
 
-    <!-- Seos välise stiilifailiga -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Seos CSS-failidega -->
+      <link rel="stylesheet" href="global.css">
+      <link rel="stylesheet" href="recipes.css">
 
     <!-- Google Fonti laadimise read -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,11 +33,11 @@
                 <!-- Nupp, millele vajutades avaneb rippmenüü -->
                 <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
                 <div class="dropdown-content">
-                    <!-- Erinevad retseptide alamlehed -->
-                    <a href="hommikusook.html">Hommikusöök</a>
-                    <a href="lounasook.html">Lõunasöök</a>
-                    <a href="ohtusook.html">Õhtusöök</a>
-                    <a href="snacks.html">Snäkk</a>
+                    <!-- Erinevad retseptide lehed -->
+                    <a href="hommikusook.html">Hommikusöögid</a>
+                    <a href="lounasook.html">Lõunasöögid</a>
+                    <a href="ohtusook.html">Õhtusöögid</a>
+                    <a href="snacks.html">Snäkid</a>
                 </div>
             </div>
 
@@ -51,247 +52,354 @@
     <h1>Lõunasöögi retseptid</h1>
 
     <!-- ESIMENE KARUSSELL: odavad lõunasöögid -->
-    <h2>Kiired ja odavad lõunasöögid</h2>
-    <!-- Karusselli konteiner (unikaalne id, et JS leiaks õige) -->
+    <h2>Kiired ja odavad</h2>
     <div class="carousel" id="breakfastCheap">
-        <!-- Üks slaid – alguses aktiivne (nähtav) -->
+
+        <!-- 1. Kartuli-liha-juustu vorm -->
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
                     <h3>Kartuli-liha-juustu vorm</h3>
-                    <p>Koostisosad:<br> 
-                        Kartulid – 2 tk (~200 g),<br> 
-                        Hakkliha – 100 g,<br> 
-                        Juust – 40 g,<br> 
-                        Piim – 50 ml,<br> 
-                        Sibul – ½ tk (soovi korral),<br> 
-                        Õli – 1 tl,<br> 
-                        Sool ja pipar – maitse järgi</p>
-                    <p>Hind: ~ 1,2 - 1,4 €</p>
-                    <p>Valmistamine: Prae hakkliha õlis koos hakitud sibulaga, kuni liha on pruunistunud.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>Kartulid – 2 tk (~200 g)</li>
+                        <li>Hakkliha – 100 g</li>
+                        <li>Juust – 40 g</li>
+                        <li>Piim – 50 ml</li>
+                        <li>Sibul – ½ tk (soovi korral)</li>
+                        <li>Õli – 1 tl</li>
+                        <li>Sool ja pipar – maitse järgi</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Prae hakkliha õlis koos hakitud sibulaga, kuni liha on pruunistunud.
                         Viiluta kartulid ja aseta ahjuvormi (või mikrolaineahjule sobivasse anumasse).
                         Lisa peale praetud liha, maitseained ja riivitud juust.
-                        Vala üle piimaga ja küpseta 200°C juures umbes 15 minutit 
-                        (või mikrolaineahjus 6–7 minutit).</p>
-                    <p>Aeg: ~ 25 minutit</p>
+                        Vala üle piimaga ja küpseta 200°C juures umbes 15 minutit
+                        (või mikrolaineahjus 6–7 minutit).
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 1,2–1,4 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 25 minutit</span>
+                    </div>
                 </div>
-                <!-- Retsepti pilt -->
-                <img src="images/ban.png" class="slide-img" alt="Kartuli-liha-juustu vorm">
+
+                <img src="images_recipes/lounasook/Kartuli-liha-juustu vorm.jpg" class="slide-img" alt="Kartuli-liha-juustu vorm">
             </div>
         </div>
 
-        <!-- Teine slaid -->
+        <!-- 2. Makaronid hakklihaga -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>Makaronid hakklihaga</h3>
-                    <p>Koostisosad:<br> 
-                        Makaronid – 120 g,<br> 
-                        Hakkliha – 100 g,<br> 
-                        Sibul – ½ tk,<br> 
-                        Tomatipasta või purustatud tomatid – 2 sl,<br> 
-                        Õli – 1 tl,<br> 
-                        Sool ja pipar – maitse järgi</p>
-                    <p>Hind: ~ 1,2 - 1,4 €</p>
-                    <p>Valmistamine: Keeda makaronid soolaga maitsestatud vees.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>Makaronid – 120 g</li>
+                        <li>Hakkliha – 100 g</li>
+                        <li>Sibul – ½ tk</li>
+                        <li>Tomatipasta või purustatud tomatid – 2 sl</li>
+                        <li>Õli – 1 tl</li>
+                        <li>Sool ja pipar – maitse järgi</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Keeda makaronid soolaga maitsestatud vees.
                         Prae pannil õlis hakitud sibul ja lisa hakkliha. Küpseta 5–6 minutit,
                         kuni liha on pruunistunud. Lisa tomatipasta, sega ja hauta 2–3 minutit.
-                        Sega kastme hulka keedetud makaronid ja kuumuta koos veel minut.</p>
-                    <p>Aeg: ~ 15 minutit</p>
+                        Sega kastme hulka keedetud makaronid ja kuumuta koos veel minut.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 1,2–1,4 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 15 minutit</span>
+                    </div>
                 </div>
-                <img src="images/Kuumad juustu-singivõileivad.png" class="slide-img" alt="Makaronid hakklihaga">
+
+                <img src="images_recipes/lounasook/Makaronid hakklihaga.jpg" class="slide-img" alt="Makaronid hakklihaga">
             </div>
         </div>
 
-        <!-- Kolmas slaid -->
+        <!-- 3. Munariis köögiviljadega -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>Munariis köögiviljadega</h3>
-                    <p>Koostisosad:<br>
-                        Keedetud riis – 150 g (võib olla eilne),<br>
-                        Muna – 1–2 tk,<br>
-                        Külmutatud köögiviljasegu – 100 g,<br>
-                        Õli – 1 tl,<br>
-                        Soya kaste või sool ja pipar</p>
-                    <p>Hind: ~ 0,6 - 0,7 €</p>
-                    <p>Valmistamine: Kuumuta pannil õli ja lisa köögiviljad. Prae 3–4 minutit.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>Keedetud riis – 150 g (võib olla eilne)</li>
+                        <li>Muna – 1–2 tk</li>
+                        <li>Külmutatud köögiviljasegu – 100 g</li>
+                        <li>Õli – 1 tl</li>
+                        <li>Soya kaste või sool ja pipar</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Kuumuta pannil õli ja lisa köögiviljad. Prae 3–4 minutit.
                         Lisa riis ja sega läbi. Löö muna pannile ja sega kõik kiiresti kokku,
-                        kuni muna on hüübinud. Maitsesta sojakastme või soolaga.</p>
-                    <p>Aeg: ~ 10 minutit</p>
+                        kuni muna on hüübinud. Maitsesta sojakastme või soolaga.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 0,6–0,7 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 10 minutit</span>
+                    </div>
                 </div>
-                <img src="images/" class="slide-img" alt="Munariis köögiviljadega retsept">
+
+                <img src="images_recipes/lounasook/Munariis_köögiviljadega.jpg" class="slide-img" alt="Munariis köögiviljadega retsept">
             </div>
         </div>
 
-        <!-- Vasak nool – kutsub välja prevSlide selle karusselli id-ga -->
+        <!-- Nooled -->
         <div class="arrow arrow-left" onclick="prevSlide('breakfastCheap')">&#8249;</div>
-        <!-- Parem nool – kutsub välja nextSlide sama id-ga -->
         <div class="arrow" onclick="nextSlide('breakfastCheap')">&#8250;</div>
     </div>
 
+
     <!-- TEINE KARUSSELL: tervislikud lõunasöögid -->
-    <h2>Tervislikud lõunasöögid</h2>
+    <h2>Tervislikud</h2>
     <div class="carousel" id="breakfastHealthy">
+
+        <!-- 1. Koorene kana-seene pasta -->
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
                     <h3>Koorene kana-seene pasta</h3>
-                    <p>Koostisosad: <br>
-                        100 g täisterapastat,<br>
-                        150 g kanafileed,<br>
-                        100 g šampinjonid,<br>
-                        100 ml maitsestamata Kreeka jogurtit või 10% koort,<br>
-                        1 küüslauguküüs,<br>
-                        ½ sibulat,<br>
-                        1 tl oliiviõli,<br>
-                        Sool, pipar, maitseroheline (nt basiilik või petersell)</p>
-                    <p>Hind: ~ 2,5 €</p>
-                    <p>Valmistamine: Keeda pasta vastavalt pakendi juhistele.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>100 g täisterapastat</li>
+                        <li>150 g kanafileed</li>
+                        <li>100 g šampinjone</li>
+                        <li>100 ml maitsestamata Kreeka jogurtit või 10% koort</li>
+                        <li>1 küüslauguküüs</li>
+                        <li>½ sibulat</li>
+                        <li>1 tl oliiviõli</li>
+                        <li>Sool, pipar, maitseroheline (nt basiilik või petersell)</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Keeda pasta vastavalt pakendi juhistele.
                         Lõika kanafilee ribadeks ja prae oliiviõlis kuldseks.
-                        Lisa tükeldatud sibul ja küüslauk, seejärel seened, ning hauta kuni pehmenemiseni.
+                        Lisa tükeldatud sibul ja küüslauk, seejärel seened ning hauta kuni pehmenemiseni.
                         Sega juurde Kreeka jogurt või koor, maitsesta soola ja pipraga.
-                        Lisa keedetud pasta pannile, sega kõik kokku ja lase 1–2 minutit 
-                        madalal kuumusel maitsetel seguneda. Serveeri värske maitserohelisega.</p>
-                    <p>Aeg: ~ 20 minutit</p>
+                        Lisa keedetud pasta pannile, sega kõik kokku ja lase 1–2 minutit
+                        madalal kuumusel maitsetel seguneda. Serveeri värske maitserohelisega.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 2,5 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 20 minutit</span>
+                    </div>
                 </div>
-                <img src="images/" class="slide-img" alt="Koorene kana-seene pasta">
+
+                <img src="images_recipes/lounasook/kana-seene_pasta.jpg" class="slide-img" alt="Koorene kana-seene pasta">
             </div>
         </div>
 
+        <!-- 2. Kookosemaitseline kana riisiga -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>Kookosemaitseline kana riisiga</h3>
-                    <p>Koostisosad:<br>
-                        150 g kanafileed,<br> 
-                        ½ sibulat,<br>
-                        1 küüslauguküüs,<br>
-                        150 ml kookospiima,<br>
-                        1 tl oliiviõli,<br>
-                        80 g riisi,<br>
-                        Sool, pipar, karri või kurkum maitse järgi,<br>
-                        Maitseroheline (nt koriander või petersell)</p>
-                    <p>Hind: ~ 2,8 €</p>
-                    <p>Valmistamine: Keeda riis vastavalt pakendi juhistele.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>150 g kanafileed</li>
+                        <li>½ sibulat</li>
+                        <li>1 küüslauguküüs</li>
+                        <li>150 ml kookospiima</li>
+                        <li>1 tl oliiviõli</li>
+                        <li>80 g riisi</li>
+                        <li>Sool, pipar, karri või kurkum maitse järgi</li>
+                        <li>Maitseroheline (nt koriander või petersell)</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Keeda riis vastavalt pakendi juhistele.
                         Lõika kanafilee tükkideks ja prae oliiviõlis kuldseks.
                         Lisa hakitud sibul ja küüslauk ja kuumuta kuni pehmenemiseni.
                         Vala juurde kookospiim, lisa maitseained ning hauta 5–7 minutit madalal kuumusel.
-                        Serveeri koos riisiga ja puista peale värske maitseroheline.</p>
-                    <p>Aeg: ~ 25 minutit</p>
+                        Serveeri koos riisiga ja puista peale värske maitseroheline.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 2,8 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 25 minutit</span>
+                    </div>
                 </div>
-                <img src="images/kaera.jpg" class="slide-img" alt="Kookosemaitseline kana riisiga">
+
+                <img src="images_recipes/lounasook/Kookosemaitseline_kana_riisiga.jpg" class="slide-img" alt="Kookosemaitseline kana riisiga">
             </div>
         </div>
 
+        <!-- 3. Tuunikalapasta tomatikastmega -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>Tuunikalapasta tomatikastmega</h3>
-                    <p>Koostisosad:<br>
-                        100 g täisterapastat,<br>
-                        1 purk Rimi tuunikala tomatikastmes,<br>
-                        ½ sibulat (soovi korral),<br>
-                        1 tl oliiviõli või tilk vett praadimiseks,<br>
-                        Sool, pipar, basiilik või oregano,<br>
-                        Soovi korral riivjuust</p>
-                    <p>Hind: ~ 2 €</p>
-                    <p>Valmistamine: Keeda pasta vastavalt pakendi juhistele.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>100 g täisterapastat</li>
+                        <li>1 purk Rimi tuunikala tomatikastmes</li>
+                        <li>½ sibulat (soovi korral)</li>
+                        <li>1 tl oliiviõli või tilk vett praadimiseks</li>
+                        <li>Sool, pipar, basiilik või oregano</li>
+                        <li>Soovi korral riivjuust</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Keeda pasta vastavalt pakendi juhistele.
                         Kui soovid rohkem maitset, kuumuta pannil veidi õli ja lisa hakitud sibul.
                         Lisa tuunikala tomatikastmes otse pannile ja kuumuta 2–3 minutit.
                         Sega juurde keedetud pasta ja maitsesta ürtidega.
-                        Serveeri riivjuustu ja basiilikuga, kui on.</p>
-                    <p>Aeg: ~ 15 minutit</p>
+                        Serveeri riivjuustu ja basiilikuga, kui on.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: ~ 2 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 15 minutit</span>
+                    </div>
                 </div>
-                <img src="images/Öökaerahelbed proteiiniga.png" class="slide-img" alt="Tuunikalapasta tomatikastmega">
+
+                <img src="images_recipes/lounasook/Tuunikalapasta_tomatikastmega.jpg" class="slide-img" alt="Tuunikalapasta tomatikastmega">
             </div>
         </div>
 
-        <!-- Nooled teise karusselli jaoks -->
+        <!-- Nooled -->
         <div class="arrow arrow-left" onclick="prevSlide('breakfastHealthy')">&#8249;</div>
         <div class="arrow" onclick="nextSlide('breakfastHealthy')">&#8250;</div>
     </div>
 
+
     <!-- KOLMAS KARUSSELL: vegan lõunasöögid -->
-    <h2>Vegan lõunasöögid</h2>
+    <h2>Vegan</h2>
     <div class="carousel" id="veganCarousel">
+
+        <!-- 1. Panniroog Thormi haksiga -->
         <div class="carousel-slide active">
             <div class="slide-content">
                 <div>
                     <h3>Panniroog Thormi haksiga</h3>
-                    <p>Koostisosad:<br>
-                        160 g kartulit,<br>
-                        85 g Thormi haksi,<br>
-                        1 paprika,<br>
-                        1–2 marineeritud kurki,<br>
-                        Õli praadimiseks,<br>
-                        Sool, pipar, maitseained (nt Cajun maitseainesegu)</p>
-                    <p>Hind: 1,8 - 2,7 €</p>
-                    <p>Valmistamine: Haki paprika ja marineeritud kurk.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>160 g kartulit</li>
+                        <li>85 g Thormi haksi</li>
+                        <li>1 paprika</li>
+                        <li>1–2 marineeritud kurki</li>
+                        <li>Õli praadimiseks</li>
+                        <li>Sool, pipar, maitseained (nt Cajun maitseainesegu)</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Haki paprika ja marineeritud kurk.
                         Kuumuta pannil õli, lisa kartulitükid ja prae kuni peaaegu valmis.
-                        Lisa pannile Thormi haks, paprika ning jätka kuumutamist 
-                        kuni kõik on läbi kuumenenud. Maitsesta soola, pipra ning maitseainetega.</p>
-                    <p>Aeg: ~ 20 - 25 minutit</p>
+                        Lisa pannile Thormi haks ja paprika ning jätka kuumutamist,
+                        kuni kõik on läbi kuumenenud. Maitsesta soola, pipра ning maitseainetega.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: 1,8–2,7 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 20–25 minutit</span>
+                    </div>
                 </div>
-                <img src="images/veganhm1.png" class="slide-img" alt="Panniroog Thormi haksiga">
+
+                <img src="images_recipes/lounasook/Thormi_haksiga.png" class="slide-img" alt="Panniroog Thormi haksiga">
             </div>
         </div>
 
+        <!-- 2. Riis vürtsika kõrvitsakastmega -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>Riis vürtsika kõrvitsakastmega</h3>
-                    <p>Koostisosad:<br>
-                        150 g riisi,<br>
-                        250 g kõrvitsat (kooritud ja tükeldatud),<br>
-                        1 sibul,<br>
-                        1 küüslauguküüs,<br>
-                        150 ml kookospiima,<br>
-                        1 tl karri või kurkumi-maitseainesegu,<br>
-                        1 tl tšillipulbrit või veidi värsket tšillit,<br>
-                        1 sl õli,<br>
-                        Sool ja pipar,<br>
-                        Värske koriander või petersell (soovi korral)</p>
-                    <p>Hind: 2 - 2,7 €</p>
-                    <p>Valmistamine: Keeda riis pakendi juhiste järgi.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>150 g riisi</li>
+                        <li>250 g kõrvitsat (kooritud ja tükeldatud)</li>
+                        <li>1 sibul</li>
+                        <li>1 küüslauguküüs</li>
+                        <li>150 ml kookospiima</li>
+                        <li>1 tl karri või kurkumi-maitseainesegu</li>
+                        <li>1 tl tšillipulbrit või veidi värsket tšillit</li>
+                        <li>1 sl õli</li>
+                        <li>Sool ja pipar</li>
+                        <li>Värske koriander või petersell (soovi korral)</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Keeda riis pakendi juhiste järgi.
                         Haki sibul ja küüslauk, tükelda kõrvits.
                         Kuumuta pannil õli, prae sibul ja küüslauk klaasjaks.
                         Lisa kõrvits ja maitseained, kuumuta paar minutit.
-                        Vala peale kookospiim, kata kaanega ja hauta 10–15 minutit, 
-                        kuni kõrvits on pehme. Püreesta kaste kreemjaks või jäta tükiline.</p>
-                    <p>Aeg: ~ 20 - 25 minutit</p>
+                        Vala peale kookospiim, kata kaanega ja hauta 10–15 minutit,
+                        kuni kõrvits on pehme. Püreesta kaste kreemjaks või jäta tükiline.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: 2–2,7 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 20–25 minutit</span>
+                    </div>
                 </div>
-                <img src="images/veganhm2.png" class="slide-img" alt="Riis vürtsika kõrvitsakastmega">
+
+                <img src="images_recipes/lounasook/Riis_vürtsika_kõrvitsakastmega.jpg" class="slide-img" alt="Riis vürtsika kõrvitsakastmega">
             </div>
         </div>
 
+        <!-- 3. Oad kikerherneste ja avokaadoga -->
         <div class="carousel-slide">
             <div class="slide-content">
                 <div>
                     <h3>Oad kikerherneste ja avokaadoga</h3>
-                    <p>Koostisosad:<br>
-                        75 g keedetud ube,<br>
-                        75 g kikerherneid,<br>
-                        1/2 küpset avokaadot,<br>
-                        1/4 punast sibulat,<br>
-                        1/2 tomatit või 3–4 kirsstomatit,<br>
-                        1 tl oliiviõli,<br>
-                        1 tl sidruni- või laimimahla,<br>
-                        Sool ja pipar,<br>
-                        Veidi maitserohelist</p>
-                    <p>Hind: 1,5 - 2 €</p>
-                    <p>Valmistamine: Loputa oad ja kikerherned, lase nõrguda.
+
+                    <p class="recipe-section-title">Koostisosad:</p>
+                    <ul>
+                        <li>75 g keedetud ube</li>
+                        <li>75 g kikerherneid</li>
+                        <li>½ küpset avokaadot</li>
+                        <li>¼ punast sibulat</li>
+                        <li>½ tomatit või 3–4 kirsstomatit</li>
+                        <li>1 tl oliiviõli</li>
+                        <li>1 tl sidruni- või laimimahla</li>
+                        <li>Sool ja pipar</li>
+                        <li>Veidi maitserohelist</li>
+                    </ul>
+
+                    <p class="recipe-section-title">Valmistamine:</p>
+                    <p>
+                        Loputa oad ja kikerherned, lase nõrguda.
                         Lõika avokaado kuubikuteks, haki sibul ja tomat.
                         Sega kõik koostisosad kausis.
                         Lisa oliiviõli, sidrunimahl, sool ja pipar.
-                        Puista peale maitserohelist ja serveeri.</p>
-                    <p>Aeg: ~ 10 - 15 minutit</p>
+                        Puista peale maitserohelist ja serveeri.
+                    </p>
+
+                    <div class="recipe-meta">
+                        <span class="recipe-meta-item">Hind: 1,5–2 €</span>
+                        <span class="recipe-meta-item">Aeg: ~ 10–15 minutit</span>
+                    </div>
                 </div>
-                <img src="images/veganhm3.png" class="slide-img" alt="Oad kikerherneste ja avokaadoga">
+
+                <img src="images_recipes/lounasook/Oad_kikerherneste_avokaadoga.webp" class="slide-img" alt="Oad kikerherneste ja avokaadoga">
             </div>
         </div>
 
-        <!-- Nooled vegan-karusselli jaoks -->
+        <!-- Nooled -->
         <div class="arrow arrow-left" onclick="prevSlide('veganCarousel')">&#8249;</div>
         <div class="arrow" onclick="nextSlide('veganCarousel')">&#8250;</div>
     </div>

@@ -1,16 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="et">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NäljaNurk - Säästunipid</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Üldine ja lehe spetsiifiline CSS -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="tips.css">
+
+    <!-- Fondid -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Lehe päis koos logoga ja navigeerimisega -->
     <header>
         <div class="header-content">
             <div class="logo-section">
@@ -20,130 +25,155 @@
             <nav>
                 <a href="index.html">Koduleht</a>
                 <div class="dropdown" id="recipesDropdown">
+                    <!-- Retseptide rippmenüü -->
                     <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
                     <div class="dropdown-content">
-                        <a href="hommikusook.html">Hommikusöök</a>
-                        <a href="lounasook.html">Lõunasöök</a>
-                        <a href="ohtusook.html">Õhtusöök</a>
+                        <!-- Erinevad retseptide lehed -->
+                        <a href="hommikusook.html">Hommikusöögid</a>
+                        <a href="lounasook.html">Lõunasöögid</a>
+                        <a href="ohtusook.html">Õhtusöögid</a>
+                        <a href="snacks.html">Snäkid</a>
                     </div>
                 </div>
                 <a href="tips.html">Säästunipid</a>
-</nav>
+            </nav>
         </div>
     </header>
-<main>
-    <h1>Säästunipid</h1>
-<p>Säästmine ei tähenda, et peaksid sööma halvasti. Kui planeerid oste teadlikult ja kasutad tooraineid targalt, saad süüa maitsvalt, mitmekülgselt ja odavalt. Oluline on natuke planeerimist ja harjumus vaadata toitu kui ressurssi, mitte lihtsalt söögikorda.</p>
 
-<div class="tips">
-  <h2>Kuidas tudengina toidult raha säästa?</h2>
-  <ol>
-    <li><h3>Osta külmutatud köögivilju ja puuvilju</h3>
-      <p>Külmutatud tooted säilitavad peaaegu kõik vitamiinid ja mineraalained, kuid on odavamad ja ei lähe nii kiiresti halvaks kui värsked. Nii väldid toidu raiskamist ja sul on alati midagi olemas, kui tahad kiiresti süüa teha.</p>
-    <img src="images_tips/frozen_vegetable.png" 
-    class="tip-photo" 
-    alt="">
-    </li>
+    <!-- Põhisisu: säästunipid -->
+    <main class="tips">
+        <h1>Säästunipid</h1>
+        <p>Säästmine ei tähenda, et peaksid sööma halvasti. Kui planeerid oste teadlikult ja kasutad tooraineid targalt, saad süüa maitsvalt, mitmekülgselt ja odavalt. Oluline on natuke planeerimist ja harjumus vaadata toitu kui ressurssi, mitte lihtsalt söögikorda.</p>
 
-    <li><h3>Osta suuremas pakendis</h3>
-      <p>Suuremad pakendid on tavaliselt soodsamad. Vaata hinnasildilt kilohinda või liitrihinda ja võrdle, kumb on kasulikum. Näiteks suur jogurtipakk või teraviljakott maksab peaaegu sama palju kui väike, aga kestab kaks korda kauem.</p>
-    <img src="images_tips/large_volume.png" 
-    class="tip-photo" 
-    alt="">
-    </li>
+        <!-- Nõuanded tudengile -->
+        <div class="tips">
+            <h2>Kuidas tudengina toidult raha säästa?</h2>
+            <ol>
+                <li>
+                    <h3>Osta külmutatud köögivilju ja puuvilju</h3>
+                    <p>Külmutatud tooted säilitavad peaaegu kõik vitamiinid ja mineraalained, kuid on odavamad ja ei lähe nii kiiresti halvaks kui värsked. Nii väldid toidu raiskamist ja sul on alati midagi olemas, kui tahad kiiresti süüa teha.</p>
+                    <img src="images_tips/frozen_vegetable.png" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
 
-    <li><h3>Asenda kallid koostisosad odavamatega</h3>
-      <p>Kui tahad rooga odavamaks muuta, kasuta alternatiive. Näiteks kartuli asemel vali riis, makaronid või tatar, need on toitvad ja hoiavad kõhu kauem täis. Liha asemel võid lisada muna või tuunikala konserv, mis on maitsev ja soodne lahendus.</p>
-    <img src="images_tips/cheap_alternative.png" 
-    class="tip-photo" 
-    alt="">
-    </li>
+                <li>
+                    <h3>Osta suuremas pakendis</h3>
+                    <p>Suuremad pakendid on tavaliselt soodsamad. Vaata hinnasildilt kilohinda või liitrihinda ja võrdle, kumb on kasulikum. Näiteks suur jogurtipakk või teraviljakott maksab peaaegu sama palju kui väike, aga kestab kaks korda kauem.</p>
+                    <img src="images_tips/large_volume.png" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
 
-    <li><h3>Valmista suurem kogus korraga</h3>
-      <p>Tee süüa mitmeks päevaks ja pane ülejäänu külmkappi. Nii säästad nii raha kui ka aega, ja sageli on toit järgmisel päeval isegi maitsvam. Võta portsjon järgmisel päeval ülikooli kaasa ja väldi kallist lõunat.</p>
-    <img src="images_tips/Food_in_containers.jpg" 
-    class="tip-photo" 
-    alt="">
-    </li>
+                <li>
+                    <h3>Asenda kallid koostisosad odavamatega</h3>
+                    <p>Kui tahad rooga odavamaks muuta, kasuta alternatiive. Näiteks kartuli asemel vali riis, makaronid või tatar, need on toitvad ja hoiavad kõhu kauem täis. Liha asemel võid lisada muna või tuunikala konserv, mis on maitsev ja soodne lahendus.</p>
+                    <img src="images_tips/cheap_alternative.png" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
 
-    <li><h3>Võta kohv või tee kodust kaasa</h3>
-      <p>Üks kohvitops maksab 2-4 eurot. Kui võtad kohvi või tee kaasa oma termosesse, säästad iga nädal mitu eurot ja kuu lõpuks võib see olla juba märkimisväärne summa.</p>
-    <img src="images_tips/thermo.png" 
-    class="tip-photo" 
-    alt="">
-    </li>
+                <li>
+                    <h3>Valmista suurem kogus korraga</h3>
+                    <p>Tee süüa mitmeks päevaks ja pane ülejäänu külmkappi. Nii säästad nii raha kui ka aega, ja sageli on toit järgmisel päeval isegi maitsvam. Võta portsjon järgmisel päeval ülikooli kaasa ja väldi kallist lõunat.</p>
+                    <img src="images_tips/Food_in_containers.jpg" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
 
-    <li><h3>Kasuta allesjäänud toitu loovalt</h3>
-      <p>Kui sul on kodus toiduaineid, mis hakkavad aeguma, valmista neist midagi uut, näiteks omlett, pajaroog või supp. See aitab vältida raiskamist ja hoida rahakotti.</p>
-    <img src="images_tips/best_before_date.png" 
-    class="tip-photo" 
-    alt="">
-    </li>
+                <li>
+                    <h3>Võta kohv või tee kodust kaasa</h3>
+                    <p>Üks kohvitops maksab 2-4 eurot. Kui võtad kohvi või tee kaasa oma termosesse, säästad iga nädal mitu eurot ja kuu lõpuks võib see olla juba märkimisväärne summa.</p>
+                    <img src="images_tips/thermo.png" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
 
-    <li><h3>Vali valgurikkad toidud</h3>
-      <p>Kui tahad, et kõht püsiks kauem täis, eelista valgurikkaid toite. Valk aitab hoida täiskõhutunnet ja annab energiat pikemaks ajaks. Hea valik on näiteks muna, tuunikala, Skyr, kodujuust või Kreeka jogurt.</p>
-    <img src="images_tips/protein_product.png" 
-    class="tip-photo" 
-    alt="">
-    </li>
+                <li>
+                    <h3>Kasuta allesjäänud toitu loovalt</h3>
+                    <p>Kui sul on kodus toiduaineid, mis hakkavad aeguma, valmista neist midagi uut, näiteks omlett, pajaroog või supp. See aitab vältida raiskamist ja hoida rahakotti.</p>
+                    <img src="images_tips/best_before_date.png" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
 
-  <h2>Kasulikud rakendused, mis aitavad raha säästa</h2>
-  <ol>
-    <li><h3>Tarbi targalt</h3>
-      <p>Tarbi targalt on rakendus, mis aitab teha teadlikumaid ostuotsuseid. Sellega saab skaneerida toodete triipkoode, vaadata tooteinfot ja võrrelda hindu.</p>
-    <img src="images_tips/tarbi_targalt.png" 
-    class="tip-photo" 
-    alt="">
-    </li>
+                <li>
+                    <h3>Vali valgurikkad toidud</h3>
+                    <p>Kui tahad, et kõht püsiks kauem täis, eelista valgurikkaid toite. Valk aitab hoida täiskõhutunnet ja annab energiat pikemaks ajaks. Hea valik on näiteks muna, tuunikala, Skyr, kodujuust või Kreeka jogurt.</p>
+                    <img src="images_tips/protein_product.png" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
+            </ol>
 
-    <li><h3>ResQ Club</h3>
-      <p>ResQ Club ühendab restoranid ja poed inimestega, kes soovivad osta head toitu soodsamalt. Päeva lõpus pakuvad ettevõtted alles jäänud toite kuni 70% soodsamalt.</p>
-    <img src="images_tips/resq.png" 
-    class="tip-photo" 
-    alt="">
-    </li>
+            <!-- Rakendused, mis aitavad raha säästa -->
+            <h2>Kasulikud rakendused, mis aitavad raha säästa</h2>
+            <ol>
+                <li>
+                    <h3>Tarbi targalt</h3>
+                    <p>Tarbi targalt on rakendus, mis aitab teha teadlikumaid ostuotsuseid. Sellega saab skaneerida toodete triipkoode, vaadata tooteinfot ja võrrelda hindu.</p>
+                    <img src="images_tips/tarbi_targalt.png" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
 
-    <li><h3>Hinnavaatlus</h3>
-      <p>Hinnavaatlus on populaarne Eesti veebiplatvorm ja rakendus, kus saab võrrelda hindasid eri poodides. Sobib nii elektroonika, kodukaupade kui ka toidukaupade kontrollimiseks.</p>
-    <img src="images_tips/Hinnavaatlus.png" 
-    class="tip-photo" 
-    alt="">
-    </li>
+                <li>
+                    <h3>ResQ Club</h3>
+                    <p>ResQ Club ühendab restoranid ja poed inimestega, kes soovivad osta head toitu soodsamalt. Päeva lõpus pakuvad ettevõtted alles jäänud toite kuni 70% soodsamalt.</p>
+                    <img src="images_tips/resq.png" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
 
-    <li><h3>Bilance</h3>
-      <p>Bilance aitab jälgida sissetulekuid ja väljaminekuid, koostada eelarvet ning näha, kuhu raha tegelikult kulub.</p>
-    <img src="images_tips/Bilance.png" 
-    class="tip-photo" 
-    alt="">
-    </li>
+                <li>
+                    <h3>Hinnavaatlus</h3>
+                    <p>Hinnavaatlus on populaarne Eesti veebiplatvorm ja rakendus, kus saab võrrelda hindasid eri poodides. Sobib nii elektroonika, kodukaupade kui ka toidukaupade kontrollimiseks.</p>
+                    <img src="images_tips/Hinnavaatlus.png" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
 
-    <li><h3>Toidupoodide rakendused</h3>
-      <p>Peaaegu kõigil suurematel toidupoodidel on oma rakendus, mis aitab ostlemisel raha säästa. Rimi, Lidl, Maxima ja Coop äpid võimaldavad kasutada digitaalseid kliendikaarte, aktiveerida kupongid ja vaadata jooksvaid sooduspakkumisi.</p>
-    <img src="images_tips/Toidupoodide_rakendused.png" 
-    class="tip-photo" 
-    alt="">
-    </li>
+                <li>
+                    <h3>Bilance</h3>
+                    <p>Bilance aitab jälgida sissetulekuid ja väljaminekuid, koostada eelarvet ning näha, kuhu raha tegelikult kulub.</p>
+                    <img src="images_tips/Bilance.png" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
 
-  </ol>
-</div>
-
+                <li>
+                    <h3>Toidupoodide rakendused</h3>
+                    <p>Peaaegu kõigil suurematel toidupoodidel on oma rakendus, mis aitab ostlemisel raha säästa. Rimi, Lidl, Maxima ja Coop äpid võimaldavad kasutada digitaalseid kliendikaarte, aktiveerida kupongid ja vaadata jooksvaid sooduspakkumisi.</p>
+                    <img src="images_tips/Toidupoodide_rakendused.png" 
+                         class="tip-photo" 
+                         alt="">
+                </li>
+            </ol>
+        </div>
     </main>
+
+    <!-- Jalus (saab hiljem lisada kontaktid vms) -->
     <footer>
     </footer>
-<script>
-function toggleDropdown() {
-    document.querySelector("#recipesDropdown .dropdown-content")
-            .classList.toggle("show");
-}
 
-// закрываем меню, если пользователь кликнул вне его
-document.addEventListener("click", function(event) {
-    const dropdown = document.getElementById("recipesDropdown");
-    if (!dropdown.contains(event.target)) {
-        dropdown.querySelector(".dropdown-content").classList.remove("show");
-    }
-});
-</script>
+    <!-- Lihtne skript rippmenüü jaoks -->
+    <script>
+        function toggleDropdown() {
+            // Näitame/peidame retseptide rippmenüüd
+            document
+                .querySelector("#recipesDropdown .dropdown-content")
+                .classList.toggle("show");
+        }
 
+        // Sulgeme menüü, kui kasutaja klikib väljapoole rippmenüüd
+        document.addEventListener("click", function(event) {
+            const dropdown = document.getElementById("recipesDropdown");
+            if (!dropdown.contains(event.target)) {
+                dropdown
+                    .querySelector(".dropdown-content")
+                    .classList.remove("show");
+            }
+        });
+    </script>
 </body>
 </html>
