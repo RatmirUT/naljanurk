@@ -207,3 +207,35 @@ footer {
 .show {
     display: block;
 }
+
+/* ----- AVALEHT ----- */
+.hero {
+    position: relative;
+    height: 350px;
+    background-image: url("images_avaleht/tudengid.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+
+.hero-content {
+    text-align: center;
+}
+
+.hero p {
+    margin: 0;
+    font-size: 18px;
+}
+
