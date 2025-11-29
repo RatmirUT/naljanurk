@@ -2,33 +2,69 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
+    <!-- Määrab, et leht on eesti keeles (lang="et") ja kasutab UTF-8 tähemärgistikku -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Teeb lehe mobiilil sõbralikuks (õige skaala ja suurus väikestel ekraanidel) -->
+
     <title>NäljaNurk - Meist</title>
+    <!-- Tekst, mida näed brauseri vahelehel -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- Siin ühendad oma CSS faili, mis kujundab lehte -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Eeltühendused Google Fontsi serveritega, et fondid kiiremini laadiks -->
+
     <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+    <!-- Laadid Google fondi "Rochester", mida kasutad logos ja pealkirjades -->
 </head>
 <body>
+    <!-- Kogu nähtav sisu tuleb body sisse -->
+
     <header>
+        <!-- Ülemine riba (logo + menüü) -->
+
         <div class="header-content">
+            <!-- Plokk, kus logo ja menüü pannakse kõrvuti (flex, vaata CSS-ist .header-content) -->
+
             <div class="logo-section">
+                <!-- Logo ja selle alampealkiri -->
+
                 <div class="logo">NäljaNurk</div>
+                <!-- Suur logo tekst, stiil tuleb .logo klassilt (CSS-is) -->
+
                 <div class="subtitle">Tudengite retseptid, tudengite nipid.</div>
+                <!-- Väiksem selgitav tekst logo all -->
             </div>
+
             <nav>
+                <!-- Navigeerimismenüü (lingid lehtede vahel liikumiseks) -->
+
                 <a href="index.html">Koduleht</a>
+                <!-- Link „koduleht“ (see sama leht või teine, sõltuvalt struktuurist) -->
+
                 <div class="dropdown" id="recipesDropdown">
+                    <!-- Dropdown-meny, mis sisaldab retseptide alamlehti -->
+
                     <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
+                    <!-- Nupp, millele klikkides JavaScript funktsioon toggleDropdown()
+                         lülitab .dropdown-content elemendile klassi .show (nähtav/peidus) -->
+
                     <div class="dropdown-content">
+                        <!-- Rippmenüü sisu – lingid erinevatele retseptilehtedele -->
+
                         <a href="hommikusook.html">Hommikusöök</a>
                         <a href="lounasook.html">Lõunasöök</a>
                         <a href="ohtusook.html">Õhtusöök</a>
                         <a href="snacks.html">Snäkk</a>
                     </div>
                 </div>
+
                 <a href="tips.html">Säästunipid</a>
-</nav>
+                <!-- Link lehele, kus on kokku hoiu ja nipid tudengitele -->
+            </nav>
 
         </div>
     </header>
@@ -73,21 +109,28 @@
     </main>
 
     <footer>
+        <!-- Praegu tühi footer, aga CSS muudab selle värviliseks ribaks lehe all -->
     </footer>
-    <script>
-function toggleDropdown() {
-    document.querySelector("#recipesDropdown .dropdown-content")
-            .classList.toggle("show");
-}
 
-// закрываем меню, если пользователь кликнул вне его
-document.addEventListener("click", function(event) {
-    const dropdown = document.getElementById("recipesDropdown");
-    if (!dropdown.contains(event.target)) {
-        dropdown.querySelector(".dropdown-content").classList.remove("show");
+    <!-- JavaScript dropdown-menüü jaoks -->
+    <script>
+    function toggleDropdown() {
+        // Leiab dropdowni sisu (#recipesDropdown .dropdown-content)
+        // ja lülitab klassi "show" (CSS-is .show { display:block; })
+        document.querySelector("#recipesDropdown .dropdown-content")
+                .classList.toggle("show");
     }
-});
-</script>
+
+    // Sulgeb dropdown-menüü, kui kasutaja klikib kuskile väljapoole menüüd
+    document.addEventListener("click", function(event) {
+        const dropdown = document.getElementById("recipesDropdown");
+        // Kui klikiti mitte dropdowni sees
+        if (!dropdown.contains(event.target)) {
+            // Eemaldab klassi "show", et menüü peitu läheks
+            dropdown.querySelector(".dropdown-content").classList.remove("show");
+        }
+    });
+    </script>
 
 </body>
 </html>
