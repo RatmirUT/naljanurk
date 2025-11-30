@@ -14,5 +14,5 @@ Retseptid on jaotatud mitmesse kategooriasse, et pakkuda valikut nii kiireks ein
 Projekt on loodud kasutades HTML-i, CSS-i ja JavaScripti ning avaldatakse UT serveris.  
 Failihaldus toimub GitHubis ja töö planeeritakse Notionis.
 
-👉 **Detailsem dokumentatsioon ja tiimi tööjaotus on leitav Wiki lehel.**
+Detailsem dokumentatsioon ja tiimi tööjaotus on leitav Wiki lehel.
 
