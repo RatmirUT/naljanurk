@@ -1,0 +1,59 @@
+/* Karusselli konteiner */
+.scroll-carousel {
+    width: 100%;
+    overflow: hidden;
+    height: 180px;             
+    margin: 40px 0;
+}
+
+.scroll-track {
+    display: flex;
+    width: calc(180px * 16);   
+    animation: scroll 80s linear infinite;
+}
+
+.item {
+    width: 180px;               
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-right: 12px;
+}
+
+.item.slide1 {
+    background-image: url("images_recipes/hommikusook/juustu_singi_voidleib.jpg");
+}
+
+.item.slide2 {
+    background-image: url("images_recipes/lounasook/kana-seene_pasta.jpg");
+}
+
+.item.slide3 {
+    background-image: url("images_recipes/snakid/Röstsepik_maapähklivõide_banaaniga.jpg");
+}
+
+.item.slide4 {
+    background-image: url("images_recipes/lounasook/Munariis_köögiviljadega.jpg");
+}
+
+.item.slide5 {
+    background-image: url("images_recipes/ohtusook/pesto_pasta.jpg");
+}
+
+.item.slide6 {
+    background-image: url("images_recipes/hommikusook/Kaerahelbepuder.jpg");
+}
+
+.item.slide7 {
+    background-image: url("images_recipes/snakid/Kohupiim_marjadega.jpg");
+}
+
+.item.slide8 {
+    background-image: url("images_recipes/ohtusook/Frikadellisupp.jpg");
+}
+
+@keyframes scroll {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}

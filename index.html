@@ -2,140 +2,152 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <!-- Määrab, et leht on eesti keeles (lang="et") ja kasutab UTF-8 tähemärgistikku -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Teeb lehe mobiilil sõbralikuks (õige skaala ja suurus väikestel ekraanidel) -->
-
     <title>NäljaNurk - Meist</title>
-    <!-- Tekst, mida näed brauseri vahelehel -->
 
-    <!-- Seos CSS-failiga -->
-      <link rel="stylesheet" href="global.css">
+    <!-- CSS-failid -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="avaleht.css">
 
+    <!-- Fontid -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Eeltühendused Google Fontsi serveritega, et fondid kiiremini laadiks -->
-
     <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
-    <!-- Laadid Google fondi "Rochester", mida kasutad logos ja pealkirjades -->
 </head>
 <body>
-    <!-- Kogu nähtav sisu tuleb body sisse -->
 
-    <header>
-        <!-- Ülemine riba (logo + menüü) -->
+<header>
+    <div class="header-content">
 
-        <div class="header-content">
-            <!-- Plokk, kus logo ja menüü pannakse kõrvuti (flex, vaata CSS-ist .header-content) -->
+        <!-- Logo -->
+        <div class="logo-section">
+            <div class="logo">NäljaNurk</div>
+            <div class="subtitle">Tudengite retseptid, tudengite nipid.</div>
+        </div>
 
-            <div class="logo-section">
-                <!-- Logo ja selle alampealkiri -->
+        <!-- Menüüriba -->
+        <nav>
+            <a href="index.html">Koduleht</a>
 
-                <div class="logo">NäljaNurk</div>
-                <!-- Suur logo tekst, stiil tuleb .logo klassilt (CSS-is) -->
+            <div class="dropdown" id="recipesDropdown">
+                <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
 
-                <div class="subtitle">Tudengite retseptid, tudengite nipid.</div>
-                <!-- Väiksem selgitav tekst logo all -->
-            </div>
-
-            <nav>
-                <!-- Navigeerimismenüü (lingid lehtede vahel liikumiseks) -->
-
-                <a href="index.html">Koduleht</a>
-                <!-- Link „koduleht“ (see sama leht või teine, sõltuvalt struktuurist) -->
-
-                <div class="dropdown" id="recipesDropdown">
-                    <!-- Dropdown-meny, mis sisaldab retseptide alamlehti -->
-
-                    <button class="dropbtn" onclick="toggleDropdown()">Retseptid ▾</button>
-                    <!-- Nupp, millele klikkides JavaScript funktsioon toggleDropdown()
-                         lülitab .dropdown-content elemendile klassi .show (nähtav/peidus) -->
-
-                    <div class="dropdown-content">
-                     <!-- Erinevad retseptide lehed -->
+                <div class="dropdown-content">
                     <a href="hommikusook.html">Hommikusöögid</a>
                     <a href="lounasook.html">Lõunasöögid</a>
                     <a href="ohtusook.html">Õhtusöögid</a>
                     <a href="snacks.html">Snäkid</a>
-                    </div>
                 </div>
-
-                <a href="tips.html">Säästunipid</a>
-                <!-- Link lehele, kus on kokku hoiu ja nipid tudengitele -->
-            </nav>
-
-        </div>
-    </header>
-
-    <main>
-
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Tudengite retseptid, tudengite nipid</h2>
-                <p>Kiired, maitsvad ja taskukohased retseptid igale tudengile</p>
             </div>
-        </section>
 
-        <h1>Meist🌿</h1>
+            <a href="tips.html">Säästunipid</a>
+        </nav>
 
-        <p>
-            👋 Hei hei! Oleme kolm Tartu Ülikooli tudengit, keda ühendab huvi hea, lihtsa ja taskukohase toidu vastu. Lõime selle veebilehe, et aidata teistel tudengitel leida maitsvaid, soodsaid ja kiiresti valmivaid retsepte, mis sobivad igasse päeva.<br>
+    </div>
+</header>
 
-            🎓 Tudengielu on tihti kiire ja eelarve on piiratud. Seetõttu tahtsime luua koha, kust leiab retsepte, mis ei eelda kallist toidukorvi ega keerulisi võtteid.<br><br>
-            Olgu sul vaja:<br>
-            🍳 kiiret hommikusööki enne loengut,<br>
-            🥗 lihtsat lõunat, mida saab karbiga kaasa võtta,<br>
-            🍝 või õhtusööki, mida teha üksi või sõpradega.
-        </p>
+<main>
 
-        <p>
-        Pole tähtis, kas oled tudeng või lihtsalt keegi, kes soovib süüa hästi ilma liigse pingutuseta — siin leiab igaüks endale midagi.<br><br>
-            💡 Meie usume, et ka väikese eelarvega saab süüa hästi, värskelt ja mitmekülgselt. Tahame muuta toiduvalmistamise lihtsaks, inspireerivaks ja nauditavaks kõigile – nii algajatele kui ka neile, kes juba armastavad köögis katsetada.
-        </p>
+    <!-- Esilehe plokk -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Tudengite retseptid, tudengite nipid</h2>
+            <p>Kiired, maitsvad ja taskukohased retseptid igale tudengile</p>
+        </div>
+    </section>
 
-        <h2>Kellele meie leht on mõeldud?</h2>
+    <h1>Meist 🌿</h1>
 
-        <p>
-            Meie veebilehe peamine sihtgrupp on:<br>
+<p>
+    Hei hei! Oleme kolm Tartu Ülikooli tudengit, keda ühendab huvi hea, lihtsa ja taskukohase toidu vastu.
+    Lõime selle veebilehe, et aidata teistel tudengitel leida maitsvaid, soodsaid ja kiiresti valmivaid retsepte,
+    mis sobivad igasse päeva.
+</p>
 
-            🎓 tudengid ja noored täiskasvanud, kes on alustamas iseseisvat elu,<br>
-        ⏳ kelle päevad on täidetud loengute, töö ja muude kohustustega,<br>
-        💸 ning kelle eelarve on sageli piiratud.<br><br>
+<p>
+    Tudengielu on tihti kiire ja eelarve on piiratud. Seetõttu soovisime luua koha, kust leiab retsepte, 
+    mis ei eelda kallist toidukorvi ega keerulisi võtteid.
+</p>
 
-            Meie retseptid sobivad nii kiiresse graafikusse kui ka väiksema eelarvega ellu. Samuti on leht mõeldud kõigile, kes hindavad:<br>
+<p>
+    <h2>Meie retseptid sobivad eriti hästi olukordadeks, kus on vaja:</h2>
+</p>
 
-        ✨ mugavust,<br>
-        ✨ tervislikkust,<br>
-        ✨ mitmekülgsust,<br>
-        ✨ ja aega säästvaid ideid.<br><br>
-            Oled tudeng või mitte – kui tahad süüa hästi ilma stressi ja liigse kuluta, <strong>oled õiges kohas!</strong> 🍽️💙
-        </p>
-    </main>
+<ul>
+    <li>kiiret hommikusööki enne loengut,</li>
+    <li>lihtsat lõunat, mida saab karbiga kaasa võtta,</li>
+    <li>õhtusööki, mida valmistada üksi või sõpradega.</li>
+</ul>
 
-    <footer>
-        <!-- Praegu tühi footer, aga CSS muudab selle värviliseks ribaks lehe all -->
-    </footer>
+    <p>
+        Pole tähtis, kas oled tudeng või lihtsalt keegi, kes soovib süüa hästi ilma liigse pingutuseta. Siin leiab igaüks endale midagi.<br><br>
+        💡 Meie usume, et ka väikese eelarvega saab süüa hästi, värskelt ja mitmekülgselt.
+        Tahame muuta toiduvalmistamise lihtsaks, inspireerivaks ja nauditavaks kõigile, nii algajatele kui ka neile, kes juba armastavad köögis katsetada.
+    </p>
 
-    <!-- JavaScript dropdown-menüü jaoks -->
-    <script>
-    function toggleDropdown() {
-        // Leiab dropdowni sisu (#recipesDropdown .dropdown-content)
-        // ja lülitab klassi "show" (CSS-is .show { display:block; })
-        document.querySelector("#recipesDropdown .dropdown-content")
-                .classList.toggle("show");
+    <!-- Fotokarussell -->
+<div class="scroll-carousel">
+    <div class="scroll-track">
+        <div class="item slide1"></div>
+        <div class="item slide2"></div>
+        <div class="item slide3"></div>
+        <div class="item slide4"></div>
+        <div class="item slide5"></div>
+        <div class="item slide6"></div>
+        <div class="item slide7"></div>
+        <div class="item slide8"></div>
+        <div class="item slide1"></div>
+        <div class="item slide2"></div>
+        <div class="item slide3"></div>
+        <div class="item slide4"></div>
+        <div class="item slide5"></div>
+        <div class="item slide6"></div>
+        <div class="item slide7"></div>
+        <div class="item slide8"></div>
+    </div>
+</div>
+
+<h2>Kellele meie leht on mõeldud?</h2>
+
+<p>
+    Meie veebilehe peamine sihtgrupp on tudengid ja noored täiskasvanud, 
+    kes on alustamas iseseisvat elu, kelle päevad on täidetud loengute, töö 
+    ja muude kohustustega ning kelle eelarve on sageli piiratud.
+</p>
+
+<p>
+    Meie retseptid sobivad eriti hästi neile, kes hindavad:
+</p>
+
+<ul>
+    <li>mugavust,</li>
+    <li>tervislikkust,</li>
+    <li>mitmekülgsust,</li>
+    <li>aega säästvaid lahendusi.</li>
+</ul>
+
+<p>
+    Kui soovid süüa hästi, lihtsalt ja ilma liigse kuluta - oled õiges kohas! Meie retseptid muudavad toiduvalmistamise mõnusaks ja stressivabaks.
+</p>
+
+</main>
+
+<footer></footer>
+
+<!-- Dropdown-menüü JS -->
+<script>
+function toggleDropdown() {
+    document.querySelector("#recipesDropdown .dropdown-content")
+            .classList.toggle("show");
+}
+
+document.addEventListener("click", function(event) {
+    const dropdown = document.getElementById("recipesDropdown");
+    if (!dropdown.contains(event.target)) {
+        dropdown.querySelector(".dropdown-content").classList.remove("show");
     }
-
-    // Sulgeb dropdown-menüü, kui kasutaja klikib kuskile väljapoole menüüd
-    document.addEventListener("click", function(event) {
-        const dropdown = document.getElementById("recipesDropdown");
-        // Kui klikiti mitte dropdowni sees
-        if (!dropdown.contains(event.target)) {
-            // Eemaldab klassi "show", et menüü peitu läheks
-            dropdown.querySelector(".dropdown-content").classList.remove("show");
-        }
-    });
-    </script>
+});
+</script>
 
 </body>
 </html>
